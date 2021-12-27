@@ -22,6 +22,12 @@ async function getHistory() {
     var day4_preciptotal = data.summaries[4].metric.precipTotal;
     var day4_windavg = data.summaries[4].metric.windspeedAvg;
     var day4_humavg = data.summaries[4].humidityAvg;
+
+    document.getElementById('day4_date').textContent = day4_date;
+    document.getElementById('day4_tempavg').textContent = day4_tempavg; 
+    document.getElementById('day4_preciptotal').textContent = day4_preciptotal;
+    document.getElementById('day4_windavg').textContent = day4_windavg; 
+    document.getElementById('day4_humavg').textContent = day4_humavg; 
  
     /* Day 3 variables */
     var day3_date = data.summaries[3].obsTimeLocal;
