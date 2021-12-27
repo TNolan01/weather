@@ -17,14 +17,15 @@
         async function getWeather() {
             const response = await fetch('https://api.weather.com/v2/pws/observations/current?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
             const data = await response.json();
-            console.log(data.observations[0].metric.elev);
-            console.log(); 
+            console.log(data.observations[0].metric.pressure);
+            console.log(data.observations[0].metric.windSpeed);
+            console.log(data); 
 
-            const elevation = data.observations[0].metric.elev;
             const pressure = data.observations[0].metric.pressure;
+            const windSpeed = data.observations[0].metric.windSpeed;
 
 
-            document.getElementById('ele').textContent = elevation;
+            document.getElementById('windspeed').textContent = windSpeed;
             document.getElementById('press').textContent = pressure;
                   
        
@@ -33,9 +34,9 @@
     </script> 
 
 <p>
-    Wind Speed : <span id="ele"></span> <br>
+    Wind Speed in km/h : <span id="windspeed"></span> <br>
 
-    Wind Gust : <span id="press"></span>
+    Current Pressure : <span id="press"></span>
 </p>
 
 
