@@ -7,10 +7,10 @@ async function getWeather() {
     console.log(data.observations[0].metric.temp);          /* current temperature */
     console.log(data.observations[0].metric.precipRate);    /* current rate of precipation */
     console.log(data.observations[0].metric.precipTotal);   /* rate of precipation since 00:01 of current day */
-    console.log(data.observations[0].uv)                    /* current UV index */
-    console.log(data.observations[0].humidity)              /* current humdidty */
-    console.log(data.observations[0].winddir                /* wind direction */
-    
+    console.log(data.observations[0].uv);                    /* current UV index */
+    console.log(data.observations[0].humidity);              /* current humdidty */
+    console.log(data.observations[0].winddir);                /* wind direction */
+
 
     console.log(data.observations[0].lat);                  /* latitude for location of weather station */
     console.log(data.observations[0].lon);                  /* longitude for location of weather station */
@@ -36,42 +36,5 @@ async function getWeather() {
     document.getElementById('precip_total').textContent = precip_total;
     document.getElementById('uv').textContent = uv_index;
     document.getElementById('humidity').textcontent = humidity;
-    
-   /*  if (windSpeed === 0){
-        windSpeed = "0";
-        }
-        else {
-            document.getElementById('windspeed').textContent = windSpeed;
-        }
-    
-    if (temp === '0'){
-        temp = "0";
-        }
-        else {
-            document.getElementById('temp').textContent = temp;
-        }
-    
-
-
-    if (precip_rate === '0'){
-        precip_rate = "0";
-        }
-        else {
-            document.getElementById('precip_rate').textContent = precip_rate;
-        }
-    
-        
-    if (precip_total === '0'){
-        precip_total = "0";
-        }
-        else {
-            document.getElementById('precip_total').textContent = precip_total;
-        }
-
-    if (uv_index === '0'){
-        uv_index = "0";
-        }
-        else {
-            document.getElementById('uv_index').textContent = uv_index;
-        } */
+    document.getElementById('winddir').textContent = windDir;
 }

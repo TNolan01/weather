@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="5" > 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="./JavaScript/getWeather.js"></script>
@@ -11,6 +12,12 @@
 </head>
 <body onload="getWeather()", onload="getHistory()">
 
+<div id="header">
+    <ul>
+        <li><a href="history.html">History</a></li>
+        <li><a href="index.html">Current</a></li>
+    </ul>
+</div>
 
 <div id="current_weather">
     <ol>
@@ -22,6 +29,7 @@
         <li>Total Daily Precipation Rate mm since 00:01: <span id="precip_total"></span></li>
         <li>UV Index: <span id="uv"></span></li>
         <li>Humidity: <span id="humidity"></span></li>
+        <li>Wind Direction: <span id="winddir"></span></li>
         
     </ol>
 
