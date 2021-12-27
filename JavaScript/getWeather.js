@@ -17,6 +17,7 @@ async function getWeather() {
 
     var pressure = data.observations[0].metric.pressure;
     var windSpeed = data.observations[0].metric.windSpeed;
+    var windGust = data.observations[0].metric.windGust;
     var temp = data.observations[0].metric.temp;
     var precip_rate = data.observations[0].metric.precipRate;
     var precip_total = data.observations[0].metric.precipTotal;
@@ -24,12 +25,14 @@ async function getWeather() {
 
 
     document.getElementById('press').textContent = pressure;
-    /* document.getElementById('windspeed').textContent = windSpeed; */
-    /* document.getElementById('temp').textContent = temp; */
-    /* document.getElementById('precip_rate').textContent = precip_rate; */
-   /*  document.getElementById('precip_total').textContent = precip_total; */
+    document.getElementById('windspeed').textContent = windSpeed; 
+    document.getElementById('windgust').textContent = windGust;
+    document.getElementById('temp').textContent = temp; 
+    document.getElementById('precip_rate').textContent = precip_rate; 
+    document.getElementById('precip_total').textContent = precip_total;
+    document.getElementById('uv').textContent = uv_index;
     
-    if (windSpeed === 0){
+   /*  if (windSpeed === 0){
         windSpeed = "0";
         }
         else {
@@ -65,5 +68,5 @@ async function getWeather() {
         }
         else {
             document.getElementById('uv_index').textContent = uv_index;
-        }
+        } */
 }

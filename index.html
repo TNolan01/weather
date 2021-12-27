@@ -4,25 +4,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="./JavaScript/getWeather.js"></script> 
+    <script type="text/javascript" src="./JavaScript/getWeather.js"></script>
+    <script type="text/javascript" src="./JavaScript/getHistory.js"></script>
+     
 
 </head>
-<body onload="getWeather()">
+<body onload="getWeather()", onload="getHistory()">
 
 
 <div id="current_weather">
     <ol>
         <li>Current Pressure : <span id="press"></span> </li>
         <li>Current Wind Speed km/hr: <span id="windspeed"></span></li>
+        <li>Current Wind Gust km/hr: <span id="windgust"></span></li>
         <li>Current Temperature °C: <span id="temp"></span> </li>
         <li>Current Precipation Rate mm/hr: <span id="precip_rate"></span></li>
         <li>Total Daily Precipation Rate mm since 00:01: <span id="precip_total"></span></li>
-        <li>UV Index: <span id="uv_index"></span></li>
-
+        <li>UV Index: <span id="uv"></span></li>
+        
     </ol>
+
 </div>
-
-
 
 </body>
 </html>
