@@ -36,12 +36,24 @@ async function getHistory() {
     var day3_windavg = data.summaries[3].metric.windspeedAvg;
     var day3_humavg = data.summaries[3].humidityAvg;
 
+    document.getElementById('day3_date').textContent = day3_date;
+    document.getElementById('day3_tempavg').textContent = day3_tempavg; 
+    document.getElementById('day3_preciptotal').textContent = day3_preciptotal;
+    document.getElementById('day3_windavg').textContent = day3_windavg; 
+    document.getElementById('day3_humavg').textContent = day3_humavg;
+
     /* Day 2 variables */
     var day2_date = data.summaries[2].obsTimeLocal;
     var day2_tempavg = data.summaries[2].metric.tempAvg;
     var day2_preciptotal = data.summaries[2].metric.precipTotal;
     var day2_windavg = data.summaries[2].metric.windspeedAvg;
     var day2_humavg = data.summaries[2].humidityAvg;
+
+    document.getElementById('day2_date').textContent = day2_date;
+    document.getElementById('day2_tempavg').textContent = day2_tempavg; 
+    document.getElementById('day2_preciptotal').textContent = day2_preciptotal;
+    document.getElementById('day2_windavg').textContent = day2_windavg; 
+    document.getElementById('day2_humavg').textContent = day2_humavg;
 
     /* Day 1 variables */
     var day1_date = data.summaries[1].obsTimeLocal;
@@ -50,7 +62,11 @@ async function getHistory() {
     var day1_windavg = data.summaries[1].metric.windspeedAvg;
     var day1_humavg = data.summaries[1].humidityAvg;
 
-
+    document.getElementById('day1_date').textContent = day1_date;
+    document.getElementById('day1_tempavg').textContent = day1_tempavg; 
+    document.getElementById('day1_preciptotal').textContent = day1_preciptotal;
+    document.getElementById('day1_windavg').textContent = day1_windavg; 
+    document.getElementById('day1_humavg').textContent = day1_humavg;
 
 }/*getHistory(); */
   
