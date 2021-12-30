@@ -68,5 +68,5 @@ async function getHistory() {
     document.getElementById('day1_windavg').textContent = day1_windavg; 
     document.getElementById('day1_humavg').textContent = day1_humavg;
 
-}/*getHistory(); */
+}
   

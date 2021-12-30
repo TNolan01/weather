@@ -4,7 +4,7 @@ async function compass() {
     var deg = data.observations[0].winddir;
     console.log(deg)
     directions = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
-// Split into the 8 directions
+    // Split into the 8 directions
     deg = deg * 8 / 360;
     // round to nearest integer.
     deg = Math.round(deg, 0);
