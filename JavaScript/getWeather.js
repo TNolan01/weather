@@ -10,7 +10,7 @@ async function getWeather() {
     console.log(data.observations[0].uv);                    /* current UV index */
     console.log(data.observations[0].humidity);              /* current humdidty */
     console.log(data.observations[0].winddir);                /* wind direction */
-
+    console.log(data.observations[0].solarRadiation);           /* solar radiation */
 
     console.log(data.observations[0].lat);                  /* latitude for location of weather station */
     console.log(data.observations[0].lon);                  /* longitude for location of weather station */
@@ -28,6 +28,7 @@ async function getWeather() {
     var humidity = data.observations[0].humidity;
     var windDir = data.observations[0].winddir;
     var deg = data.observations[0].winddir;
+    var solar = data.observations[0].solarRadiation;
 
     directions = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
     // Split into the 8 directions
@@ -38,9 +39,6 @@ async function getWeather() {
     deg = (deg + 8) % 8;
     console.log(directions[deg])
 
-    document.getElementById('deg').textContent = directions[deg]
-
-
     document.getElementById('press').textContent = pressure;
     document.getElementById('windspeed').textContent = windSpeed; 
     document.getElementById('windgust').textContent = windGust;
@@ -50,6 +48,7 @@ async function getWeather() {
     document.getElementById('uv').textContent = uv_index;
     document.getElementById('humidity').textContent = humidity;
     document.getElementById('winddir').textContent = windDir;
- 
+    document.getElementById('deg').textContent = directions[deg];
+    document.getElementById('solar').textContent = solar;
 
 }
