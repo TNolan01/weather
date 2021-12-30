@@ -2,15 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="5" > 
+    <meta http-equiv="refresh" content="60" > 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="./JavaScript/getWeather.js"></script>
-    <script type="text/javascript" src="./JavaScript/getHistory.js"></script>
+    <script type="text/javascript" src="./JavaScript/compass.js"></script> 
      
 
 </head>
-<body onload="getWeather()", onload="getHistory()">
+<body onload="getWeather()", onload="compass()">
+
 
 <div id="header">
     <ul>
@@ -30,10 +31,21 @@
         <li>UV Index: <span id="uv"></span></li>
         <li>Humidity: <span id="humidity"></span></li>
         <li>Wind Direction: <span id="winddir"></span></li>
-        
+        <li>Compass: <span id="deg"></span> </li>
+                
     </ol>
+    
 
 </div>
+<div> 
+   
+    <button onclick="compass()">Click me</button> 
+    <li>Compass: <span id="deg"></span> </li>
+
+</div>
+
+
+
 
 </body>
 </html>

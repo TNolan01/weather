@@ -27,6 +27,19 @@ async function getWeather() {
     var uv_index = data.observations[0].uv;
     var humidity = data.observations[0].humidity;
     var windDir = data.observations[0].winddir;
+    var deg = data.observations[0].winddir;
+
+    directions = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
+    // Split into the 8 directions
+    deg = deg * 8 / 360;
+    // round to nearest integer.
+    deg = Math.round(deg, 0);
+    // Ensure it's within 0-7
+    deg = (deg + 8) % 8;
+    console.log(directions[deg])
+
+    document.getElementById('deg').textContent = directions[deg]
+
 
     document.getElementById('press').textContent = pressure;
     document.getElementById('windspeed').textContent = windSpeed; 
@@ -35,6 +48,8 @@ async function getWeather() {
     document.getElementById('precip_rate').textContent = precip_rate; 
     document.getElementById('precip_total').textContent = precip_total;
     document.getElementById('uv').textContent = uv_index;
-    document.getElementById('humidity').textcontent = humidity;
+    document.getElementById('humidity').textContent = humidity;
     document.getElementById('winddir').textContent = windDir;
+ 
+
 }
