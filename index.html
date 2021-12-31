@@ -2,20 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="60" > 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="./CSS/style.css">
     
-
 </head>
-<body onload="getWeather()", onload="compass()">
+<body onload="getWeather()">
 
 
 <div id="header">
     <ul>
         <li><a href="history.html">History</a></li>
         <li><a href="index.html">Current</a></li>
+        <li><a href="rain_chart.html">Rain </a> </li>
     </ul>
 </div>
 
@@ -34,16 +33,10 @@
         <li>Solar: <span id="solar"></span> </li>           
     </ol>
     
-
-</div>
-<div> 
-      <button onclick="compass()">Click me</button> 
 </div>
 
 
 
     <script src="./JavaScript/getWeather.js"></script>
-    <script src="./JavaScript/compass.js"></script> 
- 
 </body>
 </html>
