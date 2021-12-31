@@ -4,7 +4,7 @@ async function getHistory() {
     console.log(data);
     console.log(data.summaries[5].obsTimeLocal);
     /* Day 5 variables */
-    var day5_date = data.summaries[5].obsTimeLocal;
+    var day5_date = data.summaries[5].obsTimeLocal.split(' ')[0].trim();
     var day5_tempavg = data.summaries[5].metric.tempAvg;
     var day5_preciptotal = data.summaries[5].metric.precipTotal;
     var day5_windavg = data.summaries[5].metric.windspeedAvg;
@@ -17,7 +17,7 @@ async function getHistory() {
     document.getElementById('day5_humavg').textContent = day5_humavg; 
     
     /* Day 4 variables */
-    var day4_date = data.summaries[4].obsTimeLocal;
+    var day4_date = data.summaries[4].obsTimeLocal.split(' ')[0].trim();
     var day4_tempavg = data.summaries[4].metric.tempAvg;
     var day4_preciptotal = data.summaries[4].metric.precipTotal;
     var day4_windavg = data.summaries[4].metric.windspeedAvg;
@@ -30,7 +30,7 @@ async function getHistory() {
     document.getElementById('day4_humavg').textContent = day4_humavg; 
  
     /* Day 3 variables */
-    var day3_date = data.summaries[3].obsTimeLocal;
+    var day3_date = data.summaries[3].obsTimeLocal.split(' ')[0].trim();
     var day3_tempavg = data.summaries[3].metric.tempAvg;
     var day3_preciptotal = data.summaries[3].metric.precipTotal;
     var day3_windavg = data.summaries[3].metric.windspeedAvg;
@@ -43,7 +43,7 @@ async function getHistory() {
     document.getElementById('day3_humavg').textContent = day3_humavg;
 
     /* Day 2 variables */
-    var day2_date = data.summaries[2].obsTimeLocal;
+    var day2_date = data.summaries[2].obsTimeLocal.split(' ')[0].trim();
     var day2_tempavg = data.summaries[2].metric.tempAvg;
     var day2_preciptotal = data.summaries[2].metric.precipTotal;
     var day2_windavg = data.summaries[2].metric.windspeedAvg;
@@ -56,7 +56,7 @@ async function getHistory() {
     document.getElementById('day2_humavg').textContent = day2_humavg;
 
     /* Day 1 variables */
-    var day1_date = data.summaries[1].obsTimeLocal;
+    var day1_date = data.summaries[1].obsTimeLocal.split(' ')[0].trim();
     var day1_tempavg = data.summaries[1].metric.tempAvg;
     var day1_preciptotal = data.summaries[1].metric.precipTotal;
     var day1_windavg = data.summaries[1].metric.windspeedAvg;
@@ -68,5 +68,12 @@ async function getHistory() {
     document.getElementById('day1_windavg').textContent = day1_windavg; 
     document.getElementById('day1_humavg').textContent = day1_humavg;
 
-}
+   
+    
+    
   
+
+
+
+}
+

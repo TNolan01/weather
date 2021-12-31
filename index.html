@@ -10,29 +10,61 @@
 <body onload="getWeather()">
 
 
-<div id="header">
+<div class ="header">
     <ul>
-        <li><a href="history.html">History</a></li>
         <li><a href="index.html">Current</a></li>
-        <li><a href="rain_chart.html">Rain </a> </li>
+        <li><a href="forecast.html">Forecast</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="rain_chart.html">Precipation Total</a> </li>
+        
     </ul>
 </div>
 
-<div id="current_weather">
-    <ol>
-        <li>Current Pressure : <span id="press"></span> </li>
-        <li>Current Wind Speed km/hr: <span id="windspeed"></span></li>
-        <li>Current Wind Gust km/hr: <span id="windgust"></span></li>
-        <li>Current Temperature °C: <span id="temp"></span> </li>
-        <li>Current Precipation Rate mm/hr: <span id="precip_rate"></span></li>
-        <li>Total Daily Precipation Rate mm since 00:01: <span id="precip_total"></span></li>
-        <li>UV Index: <span id="uv"></span></li>
-        <li>Humidity: <span id="humidity"></span></li>
-        <li>Wind Direction: <span id="winddir"></span></li>
-        <li>Compass: <span id="deg"></span> </li>
-        <li>Solar: <span id="solar"></span> </li>           
-    </ol>
-    
+<div class ="container">
+    <div class ="box">
+        <h3>Current Temperature °C:</h3> 
+        <h2><span id="temp"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Current Pressure hPa:</h3> 
+        <h2><span id="press"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Wind Speed km/hr:</h3>
+        <h2><span id="windspeed"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Wind Gust km/hr:</h3>
+        <h2><span id="windgust"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Wind Direction Deg:</h3>
+        <h2><span id="winddir"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Compass Direction Of Wind:</h3>
+        <h2><span id="deg"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Precipation Rate mm/hr:</h3>
+        <h2><span id="precip_rate"></span></h2>
+    </div>   
+    <div class ="box">
+        <h3>Current Daily Precipation Total mm:</h3>
+        <h2><span id="precip_total"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>UV Index:</h3>
+        <h2><span id="uv"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Humidity %:</h3>
+        <h2><span id="humidity"></span></h2>
+    </div>
+    <div class ="box">
+        <h3>Solar Radiation watt/m2:</h3>
+        <h2><span id="solar"></span></h2>
+    </div>
 </div>
 
 
