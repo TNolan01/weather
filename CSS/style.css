@@ -9,20 +9,42 @@ h3 {
 
 h2 {
     font-weight: bolder;
-    color: whitesmoke;
+    color: black;
     font-size: xx-large;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 } 
 
 .box {
     background-color: grey;
-    align-content: center;
     padding: 2rem;
-    text-align: center; 
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    height: 280px;
+    width: 280px;
+    position: relative; 
+    display: table-cell;
+}
+
+.circle { 
+    border: solid orange 20px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    overflow: hidden;
+}    
+
+.circle h2 {
+    display: inline-block;
+    align-content: center;
+    margin-top: 40%;
+    font-size: x-large;
 }
