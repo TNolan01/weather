@@ -16,7 +16,6 @@ async function getWeather() {
     console.log(data.observations[0].lon);                  /* longitude for location of weather station */
 
     console.log(data); 
-
   
     var pressure = data.observations[0].metric.pressure;
     var windSpeed = data.observations[0].metric.windSpeed;
@@ -30,6 +29,7 @@ async function getWeather() {
     var deg = data.observations[0].winddir;
     var solar = data.observations[0].solarRadiation;
 
+    /* Maths to convert degree's to cardinal direction*/
     directions = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
     // Split into the 8 directions
     deg = deg * 8 / 360;
@@ -37,7 +37,7 @@ async function getWeather() {
     deg = Math.round(deg, 0);
     // Ensure it's within 0-7
     deg = (deg + 8) % 8;
-    console.log(directions[deg])
+    console.log(directions[deg]);
 
     document.getElementById('press').textContent = pressure;
     document.getElementById('windspeed').textContent = windSpeed; 
@@ -50,5 +50,14 @@ async function getWeather() {
     document.getElementById('winddir').textContent = windDir;
     document.getElementById('deg').textContent = directions[deg];
     document.getElementById('solar').textContent = solar;
+
+
+    /* Get current time */
+
+    var dt = data.observations[0].obsTimeLocal;
+    document.getElementById('date-time').textContent = dt; 
+    console.log(dt);
+
+    
 
 }

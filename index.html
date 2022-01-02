@@ -8,19 +8,22 @@
     
 </head>
 <body onload="getWeather()">
-
-
-<div class ="header">
-    <ul>
-        <li><a href="index.html">Current</a></li>
-        <li><a href="forecast.html">Forecast</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="rain_chart.html">Precipation Total</a> </li>
-        
-    </ul>
+<div class="heading">
+        <img class="logo" src="Media/weatherlogo.png">
+        <h1 class="headtext">Weather Now</h1>
+        <span id="date-time"></span>
 </div>
 
-<div class ="container">
+<div class="navbar">
+    <a href="index.html">Home<i class="fas fa-home"></i></a>
+    <a href="forecast.html">Forecast</a>
+    <a href="history.html">History</a> 
+    <a href="rain_chart.html">Precipation Total</a> 
+</div>
+
+
+
+<div class="container">
     <div class ="box">
         <h3>Current Temperature:</h3> 
             <div class="circle">

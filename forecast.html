@@ -8,36 +8,42 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<div class ="header">
-    <ul>
-        <li><a href="index.html">Current</a></li>
-        <li><a href="forecast.html">Forecast</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="rain_chart.html">Precipation Total</a> </li>
-        
-    </ul>
-</div>
+
 
 
 <body onload = "getForecast()">
-    <div class="container">
-        <div class ="box">
-            <h3>When ?</h3> <span id ="daypart1"></span>
-            <h3>Forecast</h3> <span id ="daypartFC1"></span>
-        </div>
-        <div class ="box">
-            <h3>When ?</h3> <span id ="daypart2"></span>
-            <h3>Forecast</h3> <span id ="daypartFC2"></span>
-        </div>
-        <div class ="box">
-            <h3>When ?</h3> <span id ="daypart3"></span>
-            <h3>Forecast</h3> <span id ="daypartFC3"></span>
-        </div>
-        <div class ="box">
-            <h3>When ?</h3> <span id ="daypart4"></span></p>
-            <h3>Forecast</h3> <span id ="daypartFC4"></span></p>
-        </div>
+
+<div>
+        <img class="logo" src="Media/weatherlogo.png">
+        <h1 class="headtext">Weather Now</h1>
+</div>
+
+<div class="navbar">
+    <a href="index.html">Home<i class="fas fa-home"></i></a>
+    <a href="forecast.html">Forecast</a>
+    <a href="history.html">History</a> 
+    <a href="rain_chart.html">Precipation Total</a> 
+</div>
+
+
+<div class="container">
+    <div class ="fcbox">
+        <h3>When ?</h3> <span id ="daypart1"></span>
+        <h3>Outlook</h3> <span id ="daypartFC1"></span>
     </div>
+    <div class ="fcbox">
+        <h3>When ?</h3> <span id ="daypart2"></span>
+        <h3>Outlook</h3> <span id ="daypartFC2"></span>
+    </div>
+    <div class ="fcbox">
+        <h3>When ?</h3> <span id ="daypart3"></span>
+        <h3>Outlook</h3> <span id ="daypartFC3"></span>
+    </div>
+    <div class ="fcbox">
+        <h3>When ?</h3> <span id ="daypart4"></span></p>
+        <h3>Outlook</h3> <span id ="daypartFC4"></span></p>
+    </div>
+</div>
 
 
     <script src="./JavaScript/forecast.js"></script>
