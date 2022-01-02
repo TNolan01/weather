@@ -5,17 +5,16 @@ async function rainChart() {
 
     console.log(data.summaries[6].metric.precipTotal);
     summaries[0].obsTimeLocal
-    summaries[0].metric
+    
     summaries[0].metric.precipTotal
   
     var pressure = data.observations[0].metric.pressure;
 
     summaries[1].obsTimeUtc
     
-    var res = "test: example1".split(':')[1].trim();
+  
 
     console.log(res);
 
-
-
 }
+rainChart();
