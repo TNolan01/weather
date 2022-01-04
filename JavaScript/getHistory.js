@@ -68,7 +68,11 @@ async function getHistory() {
     document.getElementById('day1_windavg').textContent = day1_windavg; 
     document.getElementById('day1_humavg').textContent = day1_humavg;
 
-   
+   /* Totals */
+
+    var rainTotal = (day1_preciptotal + day2_preciptotal + day3_preciptotal + day4_preciptotal + day5_preciptotal);
+    rainTotal = rainTotal.toFixed(2);
+    console.log(rainTotal);
     
     
   

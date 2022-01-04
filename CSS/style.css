@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Titillium Web', sans-serif;
+    width: 100%;
 }
 
 h3 {
@@ -18,7 +19,7 @@ h2 {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 30%);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 } 
@@ -55,7 +56,7 @@ h2 {
 /**  navigation bar **/
 
 .navbar{
-    width: 100%;
+    width: 95%;
     background-color: grey;
     margin-bottom: 2rem;
     /* text-align: center; */
@@ -90,7 +91,7 @@ h2 {
     align-items: center;
     position: relative; 
     display: table-cell;
-    border: solid 3px orange;
+    border: solid 5px orange;
 }
 
 .fcbox span {
@@ -108,7 +109,7 @@ h2 {
     align-items: center;
     position: relative; 
     display: table-cell;
-    border: solid 3px orange;
+    border: solid 5px orange;
 }
 
 .hisbox span {
