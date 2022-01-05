@@ -68,16 +68,22 @@ async function getHistory() {
     document.getElementById('day1_windavg').textContent = day1_windavg; 
     document.getElementById('day1_humavg').textContent = day1_humavg;
 
-   /* Totals */
-
+    /* Totals */
+    /* rain fall total over 5days */
     var rainTotal = (day1_preciptotal + day2_preciptotal + day3_preciptotal + day4_preciptotal + day5_preciptotal);
-    rainTotal = rainTotal.toFixed(2);
+    rainTotal = rainTotal.toFixed(2); 
     console.log(rainTotal);
-    
-    
-  
+    /* average temperature over 5days */
+    var averageTemp = (day1_tempavg + day2_tempavg + day3_tempavg + day4_tempavg + day5_tempavg)/5;
+    console.log(averageTemp);
+    /* average humidity over 5days */
+    var averageHum = (day1_humavg + day2_humavg + day3_humavg + day4_humavg + day5_humavg)/5;
+    console.log(averageHum);
 
-
-
+    document.getElementById('rainTotal').textContent = rainTotal;
+    document.getElementById('averageTemp').textContent = averageTemp;
+    document.getElementById('averageHum').textContent = averageHum;
+   
 }
+    
 
