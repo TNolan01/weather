@@ -121,3 +121,27 @@ h1 {
 .hisbox span {
     font-size: x-large;
     font-weight: bold;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        gap: 5px;
+        grid-auto-rows: minmax(auto, auto);
+
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 90%);
+        gap: 5px;
+        grid-auto-rows: minmax(auto, auto);
+
+  }
+}
