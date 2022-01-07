@@ -28,6 +28,7 @@ h1 {
     grid-template-columns: repeat(3, 30%);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+   
 } 
 
 .box {
@@ -40,6 +41,8 @@ h1 {
     width: 280px;
     position: relative; 
     display: table-cell;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .circle { 
@@ -62,10 +65,9 @@ h1 {
 /**  navigation bar **/
 
 .navbar{
-    width: 95%;
+    width: auto;
     background-color: grey;
     margin-bottom: 2rem;
-    /* text-align: center; */
     padding: 2rem;
 }
 
@@ -116,6 +118,8 @@ h1 {
     position: relative; 
     display: table-cell;
     border: solid 5px orange;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .hisbox span {
@@ -124,6 +128,25 @@ h1 {
 }
 
 /* media queries */
+
+@media screen and (max-width: 1400px) {
+    .navbar a {
+        font-size: x-large;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 3rem;
+    }
+    
+    .navbar a:hover {
+        color: orange;
+        font-size: x-large;
+    }
+
+
+
+}
+
+
 
 @media screen and (max-width: 1200px) {
     .container {
@@ -136,6 +159,23 @@ h1 {
 }
 
 
+@media screen and (max-width: 980px) {
+    .navbar a {
+        font-size: large;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 1rem;
+    }
+    
+    .navbar a:hover {
+        color: orange;
+        font-size: large;
+    }
+
+
+
+}
+
 @media screen and (max-width: 780px) {
     .container {
         display: grid;
@@ -143,5 +183,23 @@ h1 {
         gap: 5px;
         grid-auto-rows: minmax(auto, auto);
 
-  }
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .navbar a {
+        font-size: x-large;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        color: orange;
+        font-size: x-large;
+    }
+    .navbar {
+        display: grid;
+    }
+
+    
 }
