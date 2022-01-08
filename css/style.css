@@ -14,7 +14,7 @@ h3 {
 h2 {
     font-weight: bolder;
     color: black;
-    font-size: xx-large;
+    font-size: large;
 }
 
 h1 {
@@ -127,6 +127,12 @@ h1 {
     font-weight: bold;
 }
 
+.totals {
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: whitesmoke;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1400px) {
@@ -141,12 +147,7 @@ h1 {
         color: orange;
         font-size: x-large;
     }
-
-
-
 }
-
-
 
 @media screen and (max-width: 1200px) {
     .container {
@@ -157,7 +158,6 @@ h1 {
 
   }
 }
-
 
 @media screen and (max-width: 980px) {
     .navbar a {
@@ -171,9 +171,6 @@ h1 {
         color: orange;
         font-size: large;
     }
-
-
-
 }
 
 @media screen and (max-width: 780px) {
@@ -185,7 +182,6 @@ h1 {
 
     }
 }
-
 
 @media screen and (max-width: 560px) {
     .navbar a {
@@ -200,6 +196,4 @@ h1 {
     .navbar {
         display: grid;
     }
-
-    
 }

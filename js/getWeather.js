@@ -30,7 +30,7 @@ async function getWeather() {
     var solar = data.observations[0].solarRadiation;
 
     /* Maths to convert degree's to cardinal direction*/
-    directions = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
+    directions = ['North', 'NorthEast', 'East', 'SouthEast', 'South', 'SouthWest', 'West', 'NorthWest'];
     // Split into the 8 directions
     deg = deg * 8 / 360;
     // round to nearest integer.
