@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    width: 100%;
+    width: 100vw;
 }
 
 h3 {
@@ -23,6 +23,7 @@ h1 {
     font-size: x-large;
 }
 
+/* index.html structure */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -88,6 +89,20 @@ h1 {
     font-weight: bolder;
     font-size: x-large;
 }
+/* footer */
+
+.footer {
+    width: auto;
+    background-color: grey;
+    margin-top: 2rem;
+    padding: 1em;
+    text-align: center;
+}
+
+h5 {
+    color: whitesmoke;
+}
+
 
 /* forecast.hmtl */
 
