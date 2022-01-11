@@ -148,6 +148,14 @@ h5 {
     background-color: whitesmoke;
 }
 
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+
 /* media queries */
 
 @media screen and (max-width: 1400px) {

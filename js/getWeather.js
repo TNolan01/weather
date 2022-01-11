@@ -17,17 +17,17 @@ async function getWeather() {
 
     console.log(data); 
   
-    var pressure = data.observations[0].metric.pressure;
-    var windSpeed = data.observations[0].metric.windSpeed;
-    var windGust = data.observations[0].metric.windGust;
-    var temp = data.observations[0].metric.temp;
-    var precip_rate = data.observations[0].metric.precipRate;
-    var precip_total = data.observations[0].metric.precipTotal;
-    var uv_index = data.observations[0].uv;
-    var humidity = data.observations[0].humidity;
-    var windDir = data.observations[0].winddir;
-    var deg = data.observations[0].winddir;
-    var solar = data.observations[0].solarRadiation;
+    let pressure = data.observations[0].metric.pressure;
+    let windSpeed = data.observations[0].metric.windSpeed;
+    let windGust = data.observations[0].metric.windGust;
+    let temp = data.observations[0].metric.temp;
+    let precip_rate = data.observations[0].metric.precipRate;
+    let precip_total = data.observations[0].metric.precipTotal;
+    let uv_index = data.observations[0].uv;
+    let humidity = data.observations[0].humidity;
+    let windDir = data.observations[0].winddir;
+    let deg = data.observations[0].winddir;
+    let solar = data.observations[0].solarRadiation;
 
     /* Maths to convert degree's to cardinal direction*/
     directions = ['North', 'NorthEast', 'East', 'SouthEast', 'South', 'SouthWest', 'West', 'NorthWest'];
@@ -54,7 +54,7 @@ async function getWeather() {
 
     /* Get current time */
 
-    var dt = data.observations[0].obsTimeLocal;
+    let dt = data.observations[0].obsTimeLocal;
     document.getElementById('date-time').textContent = dt; 
     console.log(dt);
 
