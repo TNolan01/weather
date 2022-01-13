@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherNow</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    function initMap() {
+        const wexford = { lat: 52.525993, lng: -6.565699 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: { lat: 52.525993, lng: -6.565699 },
+          mapTypeId: "satellite"
+        });
+        
+        const marker = new google.maps.Marker({
+          position: wexford,
+          map: map,
+        });
+      }
+    </script>
 
+    
 </head>   
 
-<body>
+<body onload="initMap()">
     <div class="heading">
         <img class="logo" src="Media/weatherlogo.png" alt="image of sun and cloud as a logo">
         <h1 class="headtext">Weather Now</h1>
@@ -23,22 +39,21 @@
         <a href="rain_chart.html">Precipation Total</a> 
     </div>
   
-   
-    <div><button onclick="rainChart()">Click me</button></div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div id="map"></div>
 
-
-
-
+    <span class="map_text"><h4>latitude: 52.525993, longitude: -6.565699. </h4></span>
 
     <div class="footer">
         <h5>Copyright Tim Nolan Jan2022. This site was designed for educational purposes.</h5>
         <a href="pws_map.html">Location of PWS </a> 
-    </div>
+    </div> 
     
-   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5sH5I88b-a_2OifjAMej05UWmFLIRZc&callback=initMap&libraries=&v=weekly" async></script>
+    
     <script src='js/getWeather.js'></script>
-    <script src='js/rainChart.js'></script> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='js/graphIt.js'></script> 
+
+
+
 </body>
 </html>

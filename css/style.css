@@ -99,6 +99,15 @@ h1 {
     text-align: center;
 }
 
+.footer a {
+    font-size: x-large;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 3rem;
+}
+
+
 h5 {
     color: whitesmoke;
 }
