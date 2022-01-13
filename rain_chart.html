@@ -6,28 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherNow</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    <script> 
+    <script>
     function initMap() {
-    // The location of Uluru
-    const uluru = { lat: 52.525993, lng: -6.565699};
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-    });
-}
-</script>
+        const wexford = { lat: 52.525993, lng: -6.565699 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: { lat: 52.525993, lng: -6.565699 },
+          mapTypeId: "satellite"
+        });
+        
+        const marker = new google.maps.Marker({
+          position: wexford,
+          map: map,
+        });
+      }
+    </script>
 
-
+    
 </head>   
 
-<body onload="rainChart()">
+<body onload="initMap()">
     <div class="heading">
         <img class="logo" src="Media/weatherlogo.png" alt="image of sun and cloud as a logo">
         <h1 class="headtext">Weather Now</h1>
@@ -49,11 +47,11 @@
 
 
     <div> 
-        <button onclick="graphIt()">Click me</button> 
+        <button onclick="initMap()">Click me</button> 
     </div>
 
     <div class="footer">
-        <h5>Copyright Tim Nolan. This site designed for educational purposes. Jan 2022</h5>
+        <h5>Copyright Tim Nolan Jan2022. This site was designed for educational purposes.</h5>
     </div>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5sH5I88b-a_2OifjAMej05UWmFLIRZc&callback=initMap&libraries=&v=weekly" async></script>
