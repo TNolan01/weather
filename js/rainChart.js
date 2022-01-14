@@ -12,9 +12,9 @@ async function rainChart() {
         console.log(today);
         day_name.push(today); 
       }
-       const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: [day_name[0], 
                     day_name[1],
@@ -25,7 +25,7 @@ async function rainChart() {
                     day_name[6]
                   ],
             datasets: [{
-                label: 'Rainfall over last 7days',
+                label: 'Rainfall Total',
                 data: [data.summaries[0].metric.precipTotal,
                       data.summaries[1].metric.precipTotal,
                       data.summaries[2].metric.precipTotal,
@@ -35,12 +35,12 @@ async function rainChart() {
                       data.summaries[6].metric.precipTotal
                       ],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -54,9 +54,22 @@ async function rainChart() {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true
+                    }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Rainfall totals over past 7days in mm'
+                    ,
+                    font: {
+                        size: 16,
+                    }
+                   
                 }
             }
         }
