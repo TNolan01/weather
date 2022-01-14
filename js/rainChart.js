@@ -1,13 +1,27 @@
 async function rainChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
-    console.log(data);
-
-    const ctx = document.getElementById('myChart').getContext('2d');
+    let day_name=[]; /* new array to hold day name for chart */
+    /* convert date and time into a day referecnce for chart label */
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      for (i=0; i<6; i++) {
+        console.log(data.summaries[i].obsTimeLocal);
+        let date = data.summaries[i].obsTimeLocal;  
+        let today= days[new Date(date).getDay()];
+        console.log(today);
+        day_name.push(today); 
+      }
+       const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: [data.summaries[0].obsTimeLocal.split(' ')[0].trim(), 
+                    data.summaries[1].obsTimeLocal.split(' ')[0].trim(),
+                    day_name[2], 
+                    'Green', 
+                    'Purple', 
+                    'Orange'
+                  ],
             datasets: [{
                 label: '# of Votes',
                 data: [12, 19, 3, 5, 2, 3],
@@ -38,93 +52,8 @@ async function rainChart() {
             }
         }
     });
-}
 
-
-
-
-
-
-
-
-
-/* 
-  var chartObject = JSON.parse(chart)
-  var ctx = document.getElementById("myChart");
-  var myChart = new Chart(ctx, {
-    type: "horizontalBar",
-    data: {
-      labels: [
-        chartObject[0][0],
-        chartObject[0][1],
-        chartObject[0][2],
-        chartObject[0][3],
-        chartObject[0][4],
-        chartObject[0][5],
-        chartObject[0][6],
-        chartObject[0][7],
-        chartObject[0][8],
-        chartObject[0][9]
-      ],
-      datasets: [
-        {
-          label: "Frequency",
-          data: [
-            chartObject[1][0],
-            chartObject[1][1],
-            chartObject[1][2],
-            chartObject[1][3],
-            chartObject[1][4],
-            chartObject[1][5],
-            chartObject[1][6],
-            chartObject[1][7],
-            chartObject[1][8],
-            chartObject[1][9]
-          ],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)"
-          ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)"
-          ],
-          borderWidth: 2
-        }
-      ]
-    },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true
-            }
-          }
-        ]
-    },
-    title: {
-            display: true,
-            text: 'Test Count'
-
-    }
   }
-}
 
- */
+
+
