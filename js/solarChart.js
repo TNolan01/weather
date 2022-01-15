@@ -1,10 +1,10 @@
-async function rainChart() {
+async function solarChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
     console.log(data);
     let day_name=[]; /* new array to hold day name for chart */
 
-    /* convert date and time into a day referecnce for chart label */
+    /* convert date and time into a day referencce for chart label */
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (i=0; i<7; i++) {
         console.log(data.summaries[i].obsTimeLocal);
@@ -12,18 +12,19 @@ async function rainChart() {
         let today= days[new Date(date).getDay()];
         console.log(today);
         day_name.push(today); 
-      }
+      }   
     
-     /* code to destory canvas to allow new chart be displayed */
-    document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';
+    /* code to destory canvas to allow new chart be displayed */
+    document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';  
 
     /* chart creation */
     const ctx = document.getElementById('myChart').getContext('2d');
     ctx.canvas.width = 400;
     ctx.canvas.height = 400;
-    myChart = new Chart (ctx, {
+    const myChart = new Chart(ctx, { 
+        
         type: 'line',
-            data: {
+        data: {
             labels: [day_name[0], 
                     day_name[1],
                     day_name[2], 
@@ -33,14 +34,14 @@ async function rainChart() {
                     day_name[6]
                   ],
             datasets: [{
-                label: 'Daily Precipation Total in mm',
-                data: [data.summaries[0].metric.precipTotal,
-                      data.summaries[1].metric.precipTotal,
-                      data.summaries[2].metric.precipTotal,
-                      data.summaries[3].metric.precipTotal,
-                      data.summaries[4].metric.precipTotal,
-                      data.summaries[5].metric.precipTotal,
-                      data.summaries[6].metric.precipTotal
+                label: 'Solar radition daily high, watts per metre squared',
+                data: [data.summaries[0].solarRadiationHigh,
+                      data.summaries[1].solarRadiationHigh,
+                      data.summaries[2].solarRadiationHigh,
+                      data.summaries[3].solarRadiationHigh,
+                      data.summaries[4].solarRadiationHigh,
+                      data.summaries[5].solarRadiationHigh,
+                      data.summaries[6].solarRadiationHigh
                       ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 1)',
@@ -72,7 +73,7 @@ async function rainChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Rainfall Totals Over Past 7days in mm'
+                    text: 'Solar Radiation Daily High Over Past 7 Days'
                     ,
                     font: {
                         size: 16,
@@ -84,9 +85,3 @@ async function rainChart() {
     });
   
   }
-        
-
-
-
-
-

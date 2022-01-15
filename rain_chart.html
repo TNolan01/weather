@@ -20,13 +20,15 @@
         <a href="index.html">Home</a>
         <a href="forecast.html">Outlook</a>
         <a href="history.html">5 Day Review</a> 
-        <a href="rain_chart.html">Precipation Total</a> 
+        <a href="rain_chart.html">Charts</a> 
     </div>
   
    
-    <div>
+    <div class="button_container">
         <button class="button" onclick="rainChart()">Precipation Totals</button>
         <button class="button" onclick="tempChart()">Temperature Averages</button>
+        <button class="button" onclick="solarChart()">Sun Shine Averages</button>
+        <button class="button" onclick="windChart()">Wind Averages</button>
     </div>
 
     <div id="chart_container">
@@ -43,8 +45,10 @@
     
    
     <script src='js/getWeather.js'></script>
-    <script src='js/rainChart.js'></script> 
-    <script src='js/tempChart.js'></script>
+    <script src='js/solarChart.js'></script>
+    <script src="js/tempChart.js"></script>
+    <script src="js/rainChart.js"></script>
+    <script src="js/windChart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

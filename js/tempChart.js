@@ -3,6 +3,7 @@ async function tempChart() {
     const data = await response.json();
     console.log(data);
     let day_name=[]; /* new array to hold day name for chart */
+
     /* convert date and time into a day referencce for chart label */
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (i=0; i<7; i++) {
@@ -13,8 +14,10 @@ async function tempChart() {
         day_name.push(today); 
       }
     
-    document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';
+    /* code to destory canvas to allow new chart be displayed */
+    document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';  
 
+    /* chart creation */
     const ctx = document.getElementById('myChart').getContext('2d');
     ctx.canvas.width = 400;
     ctx.canvas.height = 400;
@@ -70,7 +73,7 @@ async function tempChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Average temperatures over past 7days / °C'
+                    text: 'Average Temperatures Over Past 7days / °C'
                     ,
                     font: {
                         size: 16,

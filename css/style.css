@@ -166,21 +166,16 @@ h5 {
     width: 100%;
 }
 
-/* #new_map{
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-    width: 100%; 
-}   */
-
-
 /* rain_chart.html */
 
 .chart_container {
-    /* height: 500px;
-    width: 100%; */
     margin-left: auto;
     margin-right: auto;
+}
+
+.button_container {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .button {
@@ -192,6 +187,7 @@ h5 {
     width: 100px;
     height: 100px;
     background-color: grey;
+    
 }
 
 /* media queries */

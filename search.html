@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+<div class="heading">
+        <img class="logo" src="Media/weatherlogo.png" alt="image of sun and cloud as a logo">
+        <h1 class="headtext">Weather Now</h1>
+        
+</div>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="forecast.html">Outlook</a>
+    <a href="history.html">5 Day Review</a> 
+    <a href="rain_chart.html">Charts</a> 
+</div>
+
+<div>
+   <!--  <input type="date" id="start" name="trip-start"
+    value="2021-01-01"
+    min="2020-01-01" max="2022-12-31">  -->
+
+    <input id="start" type="text" placeholder="Search.." name="enter date">
+    <button id="searchBtn" class="button" onclick="historical()">search</button>
+
+    </button>
+
+</div>
+
+   
+<div class="footer">
+    <h5>Copyright Tim Nolan Jan2022. This site was designed for educational purposes.</h5>
+    <a href="pws_map.html">Location of PWS </a> 
+</div>
+
+<script src="js/historical.js"></script>
+
+</body>
+</html>
