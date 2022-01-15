@@ -1,9 +1,9 @@
-async function rainChart() {
+async function tempChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
     console.log(data);
     let day_name=[]; /* new array to hold day name for chart */
-    /* convert date and time into a day referecnce for chart label */
+    /* convert date and time into a day referencce for chart label */
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (i=0; i<7; i++) {
         console.log(data.summaries[i].obsTimeLocal);
@@ -15,13 +15,13 @@ async function rainChart() {
     
     document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';
 
-    
     const ctx = document.getElementById('myChart').getContext('2d');
     ctx.canvas.width = 400;
     ctx.canvas.height = 400;
-    myChart = new Chart (ctx, {
+    const myChart = new Chart(ctx, { 
+        
         type: 'line',
-            data: {
+        data: {
             labels: [day_name[0], 
                     day_name[1],
                     day_name[2], 
@@ -31,14 +31,14 @@ async function rainChart() {
                     day_name[6]
                   ],
             datasets: [{
-                label: 'Daily Precipation Total in mm',
-                data: [data.summaries[0].metric.precipTotal,
-                      data.summaries[1].metric.precipTotal,
-                      data.summaries[2].metric.precipTotal,
-                      data.summaries[3].metric.precipTotal,
-                      data.summaries[4].metric.precipTotal,
-                      data.summaries[5].metric.precipTotal,
-                      data.summaries[6].metric.precipTotal
+                label: 'Average daily temperatures °C',
+                data: [data.summaries[0].metric.tempAvg,
+                      data.summaries[1].metric.tempAvg,
+                      data.summaries[2].metric.tempAvg,
+                      data.summaries[3].metric.tempAvg,
+                      data.summaries[4].metric.tempAvg,
+                      data.summaries[5].metric.tempAvg,
+                      data.summaries[6].metric.tempAvg
                       ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 1)',
@@ -70,7 +70,7 @@ async function rainChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Rainfall totals over past 7days in mm'
+                    text: 'Average temperatures over past 7days / °C'
                     ,
                     font: {
                         size: 16,
@@ -82,9 +82,3 @@ async function rainChart() {
     });
   
   }
-        
-
-
-
-
-
