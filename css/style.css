@@ -127,6 +127,7 @@ h5 {
     position: relative; 
     display: table-cell;
     border: solid 5px orange;
+    border-radius: 25%;
 }
 
 .fcbox span {
