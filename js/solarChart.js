@@ -65,8 +65,7 @@ async function solarChart() {
         options: {
                 animation: {
                 onComplete: function() {
-                console.log(myChart.toBase64Image());
-            }}, 
+               }}, 
             responsive: true,
             maintainAspectRatio: false,
             scales: {
@@ -87,14 +86,21 @@ async function solarChart() {
             }
         }
     });
-    var image = myChart.toBase64Image();
-    console.log(image);
-
+    var image = myChart.toBase64Image();  /* variable for chart image */
+    
     document.getElementById('btn-download').onclick = function() {
-    // Trigger the download
-    var a = document.createElement('a');
-    a.href = myChart.toBase64Image();
-    a.download = 'my_file_name.png';
-    a.click();
-  }
+       
+            let confirmAction = confirm("Are you sure you want to download this chart?");
+            if (confirmAction) {
+                alert("Download successfully executed");
+                var a = document.createElement('a');
+                a.href = myChart.toBase64Image();
+                a.download = 'weather_chart.png';
+                a.click();
+            } else {
+              alert("Download cancelled");
+                 
+            }
+            
+    }
 }

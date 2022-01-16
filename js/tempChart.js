@@ -62,7 +62,10 @@ async function tempChart() {
                 borderWidth: 1
             }]
         },
-        options: {
+        options: { 
+            animation: {
+            onComplete: function() {
+           }},
             responsive: true,
             maintainAspectRatio: false,
             scales: {
@@ -83,5 +86,20 @@ async function tempChart() {
             }
         }
     });
-  
-  }
+    var image = myChart.toBase64Image();  /* variable for chart image */
+    
+    document.getElementById('btn-download').onclick = function() {
+       
+            let confirmAction = confirm("Are you sure you want to download this chart?");
+            if (confirmAction) {
+                alert("Download successfully executed");
+                var a = document.createElement('a');
+                a.href = myChart.toBase64Image();
+                a.download = 'weather_chart.png';
+                a.click();
+            } else {
+              alert("Download cancelled");
+                 
+            }
+        }
+}
