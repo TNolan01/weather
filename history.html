@@ -15,14 +15,22 @@
 </div>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
+    <a href="index.html">Current</a>
     <a href="forecast.html">Outlook</a>
-    <a href="history.html">5 Day Review</a> 
+    <a href="history.html">7 Day Review</a> 
     <a href="rain_chart.html">Charts</a> 
 </div>
     
 
 <div class="container">
+
+    <div class="hisbox">
+        <h2> Date: </h2> <h3><span id="day6_date"></span></h3>
+        <h2> Average Temperature:</h2> <h3><span id="day6_tempavg"></span>°C</h3>
+        <h2> Rain Fall Total:</h2> <h3><span id="day6_preciptotal"></span>mm</h3>
+        <h2> Average Wind Speed:</h2> <h3><span id="day6_windavg"></span>km/hr</h3>
+        <h2> Average Humidity:</h2> <h3><span id="day6_humavg"></span>%</h3>
+    </div>
      
     <div class="hisbox">
         <h2> Date: </h2> <h3><span id="day5_date"></span></h3>
@@ -65,11 +73,19 @@
     </div>
 
     <div class="hisbox">
-        <h3> Total Precipation over past 5 days: </h3> 
+        <h2> Date: </h2> <h3><span id="day0_date"></span></h3>
+        <h2> Average Temperature:</h2> <h3><span id="day0_tempavg"></span>°C</h3>
+        <h2> Rain Fall Total:</h2> <h3><span id="day0_preciptotal"></span>mm</h3>
+        <h2> Average Wind Speed:</h2> <h3><span id="day0_windavg"></span>km/hr</h3>
+        <h2> Average Humidity:</h2> <h3><span id="day0_humavg"></span>%</h3>
+    </div>
+
+    <div class="hisbox">
+        <h3> Total Precipation over past 7 days: </h3> 
         <h1 class="totals"> <span id="rainTotal"></span>mm </h1> 
-        <h3> Average Temperature over past 5 days:</h3> 
+        <h3> Average Temperature over past 7 days:</h3> 
         <h1 class="totals"> <span id="averageTemp"></span>°C </h1>
-        <h3> Average Humidity over past 5 days:</h3> 
+        <h3> Average Humidity over past 7 days:</h3> 
         <h1 class="totals"> <span id="averageHum"></span>% </h1>
     </div>
   

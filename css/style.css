@@ -193,6 +193,7 @@ h5 {
 
 .button:hover {
     border-color: rgb(0, 119, 255);
+    border: 4px ridge;
 }
 
 

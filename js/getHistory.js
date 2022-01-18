@@ -3,6 +3,20 @@ async function getHistory() {
     const data = await response.json();
     console.log(data);
     console.log(data.summaries[5].obsTimeLocal);
+
+    /* Day 6 variables */
+    let day6_date = data.summaries[6].obsTimeLocal.split(' ')[0].trim();
+    let day6_tempavg = data.summaries[6].metric.tempAvg;
+    let day6_preciptotal = data.summaries[6].metric.precipTotal;
+    let day6_windavg = data.summaries[6].metric.windspeedAvg;
+    let day6_humavg = data.summaries[6].humidityAvg;
+
+    document.getElementById('day6_date').textContent = day6_date;
+    document.getElementById('day6_tempavg').textContent = day6_tempavg; 
+    document.getElementById('day6_preciptotal').textContent = day6_preciptotal;
+    document.getElementById('day6_windavg').textContent = day6_windavg; 
+    document.getElementById('day6_humavg').textContent = day6_humavg; 
+
     /* Day 5 variables */
     let day5_date = data.summaries[5].obsTimeLocal.split(' ')[0].trim();
     let day5_tempavg = data.summaries[5].metric.tempAvg;
@@ -68,17 +82,31 @@ async function getHistory() {
     document.getElementById('day1_windavg').textContent = day1_windavg; 
     document.getElementById('day1_humavg').textContent = day1_humavg;
 
+    /* Day 0 variables */
+    let day0_date = data.summaries[0].obsTimeLocal.split(' ')[0].trim();
+    let day0_tempavg = data.summaries[0].metric.tempAvg;
+    let day0_preciptotal = data.summaries[0].metric.precipTotal;
+    let day0_windavg = data.summaries[0].metric.windspeedAvg;
+    let day0_humavg = data.summaries[0].humidityAvg;
+
+    document.getElementById('day0_date').textContent = day0_date;
+    document.getElementById('day0_tempavg').textContent = day0_tempavg; 
+    document.getElementById('day0_preciptotal').textContent = day0_preciptotal;
+    document.getElementById('day0_windavg').textContent = day0_windavg; 
+    document.getElementById('day0_humavg').textContent = day0_humavg;
+
     /* Totals */
-    /* rain fall total over 5days */
-    let rainTotal = (day1_preciptotal + day2_preciptotal + day3_preciptotal + day4_preciptotal + day5_preciptotal);
+    /* rain fall total over 7days */
+    let rainTotal = (day0_preciptotal + day1_preciptotal + day2_preciptotal + day3_preciptotal + day4_preciptotal + day5_preciptotal + day6_preciptotal);
     rainTotal = rainTotal.toFixed(2); 
-    console.log(rainTotal);
-    /* average temperature over 5days */
-    let averageTemp = (day1_tempavg + day2_tempavg + day3_tempavg + day4_tempavg + day5_tempavg)/5;
-    console.log(averageTemp);
-    /* average humidity over 5days */
-    let averageHum = (day1_humavg + day2_humavg + day3_humavg + day4_humavg + day5_humavg)/5;
-    console.log(averageHum);
+    
+    /* average temperature over 7days */
+    let averageTemp = (day0_tempavg + day1_tempavg + day2_tempavg + day3_tempavg + day4_tempavg + day5_tempavg + day6_tempavg )/7;
+    averageTemp = averageTemp.toFixed(2);
+
+    /* average humidity over 7days */
+    let averageHum = (day0_humavg + day1_humavg + day2_humavg + day3_humavg + day4_humavg + day5_humavg + day6_humavg)/7;
+    averageHum = averageHum.toFixed(2);
 
     document.getElementById('rainTotal').textContent = rainTotal;
     document.getElementById('averageTemp').textContent = averageTemp;

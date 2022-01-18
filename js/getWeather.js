@@ -1,22 +1,7 @@
 async function getWeather() {
     const response = await fetch('https://api.weather.com/v2/pws/observations/current?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
-    console.log(data.observations[0].metric.pressure);      /* current pressure */
-    console.log(data.observations[0].metric.windSpeed);     /* current wind speed */
-    console.log(data.observations[0].metric.windGust);      /* current highest wind gust */
-    console.log(data.observations[0].metric.temp);          /* current temperature */
-    console.log(data.observations[0].metric.precipRate);    /* current rate of precipation */
-    console.log(data.observations[0].metric.precipTotal);   /* rate of precipation since 00:01 of current day */
-    console.log(data.observations[0].uv);                    /* current UV index */
-    console.log(data.observations[0].humidity);              /* current humdidty */
-    console.log(data.observations[0].winddir);                /* wind direction */
-    console.log(data.observations[0].solarRadiation);           /* solar radiation */
-
-    console.log(data.observations[0].lat);                  /* latitude for location of weather station */
-    console.log(data.observations[0].lon);                  /* longitude for location of weather station */
-
-    console.log(data); 
-  
+     
     let pressure = data.observations[0].metric.pressure;
     let windSpeed = data.observations[0].metric.windSpeed;
     let windGust = data.observations[0].metric.windGust;
