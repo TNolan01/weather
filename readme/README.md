@@ -3,7 +3,7 @@
 ### Deployed Site : https://tnolan01.github.io/weather/
 
 ### Introduction:
-*WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via API's and displays the information in a more user friendly and exact format.*
+*WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via an API and displays the information in a more user friendly and exact format.*
 
 <br>
 
@@ -27,7 +27,7 @@
 
 ### User Stories:
 
-<p>This website was designed primarily for use by a farmer local to the area. Farmer Browne has just purchased a new farm, a 250 hectare block of land in the 'Sunny' South East corner of Ireland, Co. Wexford. This parcel of ground is approximatley 40 kilometres from Farmer Brownes main centre of operations but the quality of the land makes it excellent for food production.
+<p>Farmer Browne has just purchased a new farm, a 250-hectare block of land in the 'Sunny' Southeast corner of Ireland, Co. Wexford. This parcel of ground is approximatley 40 kilometres from Farmer Brownes main center of operations but the quality of the land makes it excellent for food production.
 Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage in rotation with Barley. Important factors for Farmer Browne to consider from the sowing to harvesting cycles of these crops would be as follows:</p>
 <ul>
 <li> Recent precipation totals.</li>
@@ -35,28 +35,24 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 <li> Humidity levels.</li>
 <li> Wind strength and direction. </li>
 </ul>
-<p> Temperature and precipation are both important elements in the growth cycle of crops. If precipation levels are low during the summer months then Farmer Browne will have to water his potato crop to maintain growth or risk lossing his crop. </p>
-<p> High levels of humidity and a consistent temperature of +10°C puts his potato crop at risk of Blight which can also wipe out Farmer Brownes potato crop. </p>
-<p> And what if Farmer Browne needs to spray his crop to protect from Blight?, then he will need to know the current strength of the wind at his new land holding. </p>
-<p> Weather information will also help Farmer Browne choose the best time for sowing and harvesting depending how much precipation is in the ground and what the short term weather outlook is.</p>
+
 <br>
-<p> Knowledge of recent and current weather, with a short term 60 to 72 hour forecast will allow Farmer Browne make better business decisions and save him time and money.
 
 *Examples:*
 <ul>
-<li> Deciding where to send his employee's to cut cabbage, which is still hand cut and very labour intensive.</li>
+<li> Deciding where and when to send his employees to harvest vegetables, many of which are still hand cut and very labour intensive.</li>
 <li> Deciding on when and if he can spray crops.</li>
 <li> Deciding on most suitable harvesting times.</li>
-<li> Deciding if recent levels of precipation have left the ground to soft to travel on or are insufficent for crop growth. </li>
+<li> Deciding if recent levels of precipitation have left the ground to soft to travel on or are insufficent for crop growth. </li>
 </ul>
 
-<p> The website will also be accessible to anyone in the area, other farmers or local residents etc. 
+<p> The website will also be accessible to anyone in the area, other farmers, local residents etc. 
 
 <br>
 <p> Luckily for Farmer Browne a property adjoining his new land has a PWS which is active and uploading weather data to the Weather Underground website.</p>
 
 ### Scope:
-*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80 kilometre round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys has staff and where and when he sends his machinary, equipment which is slow and expensive and would comsume alot of diesel on the 80 kilometre trip.*
+*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80 kilometer round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys has staff and where and when he sends his machinery, equipment which is slow and expensive and would consume a lot of diesel on the 80 kilometre trip.*
 
 <ol>
 <li> Ascertain the information the end user, Farmer Browne, requires. </li>
@@ -80,7 +76,7 @@ The site must be...
 <li> Grey header and footer white text in white for clarity and contrast. </li>
 <li> Use of orange as high-light color. Orange is used to distinguish sections and values. I also used the orange color with the 'hover' property to show when the user is over a selectable option on the header and footer sections.
 <li> I used blue with the 'hover' property on the buttons on the Charts page to help distinguish which button the user is hovering over. </li>
-<li> The site has simple weather related logo in the top left hand corner of the screen.</li>
+<li> The site has simple weather-related logo in the top left-hand corner of the screen.</li>
 </ul> 
 
 <p>Styling of the html structure is handled by the file located in the css folder. </p>
@@ -92,26 +88,26 @@ pic of colors here xxxxxxxxxxxxxx
 ## Structure:
 #### Site Structure:
 <p> The site is built with a HTML structure, with styling through CSS and with functionality coded with JavaScript. <p>
-<p> I am using Application Programming Interface, API, to coommunicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
+<p> I am using Application Programming Interface, API, to communicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
 <p> Data displayed on the site is retrieved by JavaScript fetch request 
 
 <h4 id="headerRef" style="color: orange; font-weight: bold">Header</h4>
-<p>The header is common across all html pages. The hmtl sturcture is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
+<p>The header is common across all html pages. The hmtl structure is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
 <p>The div has a class of <span style="color: orange;">'navbar'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
 image of header here xxxxxxxxxx
 
 <h4 id="footerRef" style="color: orange; font-weight: bold">Footer</h4>
-<p>The header is also common across all html pages. The hmtl sturcture of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text *Copyright Tim Nolan Jan2022. This site was designed for educational purposes.*</p>
+<p>The header is also common across all html pages. The hmtl structure of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text *Copyright Tim Nolan Jan2022. This site was designed for educational purposes.*</p>
 <p>This div has a class of <span style="color: orange;">' footer'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
 image of footer here xxxxxxx
 
 <h4 style="color: orange; font-weight: bold">index.html</h4>
 
-<p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
+<p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
 
-<p>The data displayed on tiles is retrived via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. <p>
+<p>The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. <p>
 
 image of index.html xxxxxx
 
@@ -134,7 +130,7 @@ image here xxxxxxxxxxxxxxxxxxxxxx
 <li>Tonight - projected forecast for the next 12 hours +.</li>
 <li>Tomorrow - projected forecast for the period 13 to 24hours +.</li>
 <li>Tomorrow Night - projected forecast for the period 25 to 36hours +.</li>
-<li>Next Day - projected forecast for the perios 37 to 48 hours +.</li>
+<li>Next Day - projected forecast for the period 37 to 48 hours +.</li>
 </ol>
 
 The forecast is generated from a fetch request to the relevant JSON data using the [forecast.js](#getForecast) script.
@@ -156,14 +152,14 @@ image here xxxxxxxxxxxxxxxxxxxxxxx
 <li>Average Humidity:</li> 
 </ol>
 
-<p> The tiles are arranged from most recent day, yesterday, backwards a 6 further days. The page also contains a 'tile' which shows three calculations made from data retrived.</p>
+<p> The tiles are arranged from most recent day, yesterday, backwards a 6 further days. The page also contains a 'tile' which shows three calculations made from data retrieved.</p>
 <ol>
 <li> Rain fall total over the past 7days.</li>
 <li> Average temperature over the past 7days.</li>
 <li> Average humidity over the past 7days.</li>
 </ol>
 
-The data is generated from a fetch request to the relevant JSON data using the [getHistory.js](#getHistory) script. Using some of the values recieved some simple calculations are made to return values for the 7 day averages listed above.
+The data is generated from a fetch request to the relevant JSON data using the [getHistory.js](#getHistory) script. Using some of the values received some simple calculations are made to return values for the 7 day averages listed above.
 
 image here  xxxxxxxxxxxx
 
@@ -174,23 +170,22 @@ image here  xxxxxxxxxxxx
 
 <p>The buttons listed on this page are as follows.</p>
 <ol>
-<li>Precipation Total, total precipation for each of the previous 7 days displayed as a line chart.</li>
+<li>Precipitation Total, total precipitation for each of the previous 7 days displayed as a line chart.</li>
 <li>Temperature Averages, the average temperature for each of the previous 7 days displayed as a line chart.</li>
 <li>Sunshine Averages, the average levels of sunshine on each day over the previous 7 days.</li>
 <li>Wind Data Chart, this chart displays the highest gust, lowest gust and average wind speed recorded on the particular day.</li>
 <li>Download Chart, this button allows the user download the currently displayed chart as a png file.</li>
 </ol>
 
-I have written a seperate JavaScript for the first four buttons as follows;
+I have written a separate JavaScript for the first four buttons as follows;
 [rainChart.js](#rainChart)
 [tempChart.js](#tempChart)
 [solarChart.js](#solarChart)
 [windChart.js](#windChart)
 
-Each script fetchs the relevant JSON data and using Chart.js creates a line chart to display the data.
+Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data.
 
 image here xxxxxxxxxx
-
 
 <h4 id="rainChart" style="color: orange; font-weight: bold">rainChart.js</h4>
 <h4 id="tempChart" style="color: orange; font-weight: bold">tempChart.js</h4>
