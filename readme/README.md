@@ -3,7 +3,7 @@
 ### Deployed Site : https://tnolan01.github.io/weather/
 
 ### Introduction:
-*WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and histroical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via API's and displays the information in a more user friendly and exact format.*
+*WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via API's and displays the information in a more user friendly and exact format.*
 
 <br>
 
@@ -82,30 +82,34 @@ The site must be...
 <li> I used blue with the 'hover' property on the buttons on the Charts page to help distinguish which button the user is hovering over. </li>
 <li> The site has simple weather related logo in the top left hand corner of the screen.</li>
 </ul> 
- 
+
+<p>Styling of the html structure is handled by the file located in the css folder. </p>
+
 pic of colors here xxxxxxxxxxxxxx
 
-#### Structure:
+
+
+## Structure:
 #### Site Structure:
 <p> The site is built with a HTML structure, with styling through CSS and with functionality coded with JavaScript. <p>
 <p> I am using Application Programming Interface, API, to coommunicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
 <p> Data displayed on the site is retrieved by JavaScript fetch request 
 
-<h4 id="header" style="color: orange; font-weight: bold">Header</h4>
+<h4 id="headerRef" style="color: orange; font-weight: bold">Header</h4>
 <p>The header is common across all html pages. The hmtl sturcture is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
 <p>The div has a class of <span style="color: orange;">'navbar'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
 image of header here xxxxxxxxxx
 
-<h4 style="color: orange; font-weight: bold">Footer</h4>
-<p>The header is also common across all html pages. The hmtl sturcture of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text * 'Copyright Tim Nolan Jan2022. This site was designed for educational purposes.' *</p>
+<h4 id="footerRef" style="color: orange; font-weight: bold">Footer</h4>
+<p>The header is also common across all html pages. The hmtl sturcture of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text *Copyright Tim Nolan Jan2022. This site was designed for educational purposes.*</p>
 <p>This div has a class of <span style="color: orange;">' footer'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
 image of footer here xxxxxxx
 
-<h4 style="color: orange; font-weight: bold">Index.html</h4>
+<h4 style="color: orange; font-weight: bold">index.html</h4>
 
-<p> The index.html shows the current weather. The page is identified on the [Header](#header) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
+<p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
 
 <p>The data displayed on tiles is retrived via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. <p>
 
@@ -115,9 +119,95 @@ The index.html pages also contains a span element below the page logo, this disp
 
 image of date and time xxxxxxxxxxxxxx
 
+<h4 style="color: orange; font-weight: bold">pws_map.html</h4>
+
+<p> The pws_map.html page contains the common header and footer elements along with a div with the id of <span style="color: orange;">'map'</span>. This id links to a Google Map's API function which renders a Google Map showing the position of weather station. The longitude and latitude used were retrieved from JSON data. </p>
+<p> There is also a span containing the longitude and latitude information. I have a text marker on the Google Map showing the words <span style="color: blue;">'Weather Station'</span>.
+
+image here xxxxxxxxxxxxxxxxxxxxxx
+
+<h4 style="color: orange; font-weight: bold">forecast.html</h4>
+
+<p> The forecast.html shows a projected 48hour forecast. The page is identified on the header. as <span style="font-weight: bolder;">'Outlook'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'fcbox'</span>. Each box again represents as a tile and contains a projected forecast for the local area. There are 4no. tiles each with the forecast of 12 hours.</p>
+<br>
+<ol>
+<li>Tonight - projected forecast for the next 12 hours +.</li>
+<li>Tomorrow - projected forecast for the period 13 to 24hours +.</li>
+<li>Tomorrow Night - projected forecast for the period 25 to 36hours +.</li>
+<li>Next Day - projected forecast for the perios 37 to 48 hours +.</li>
+</ol>
+
+The forecast is generated from a fetch request to the relevant JSON data using the [forecast.js](#getForecast) script.
+The values are based on most current data.
+
+image here xxxxxxxxxxxxxxxxxxxxxxx
+
+
+<h4 style="color: orange; font-weight: bold">history.html</h4>
+
+<p> The history.html shows a summary of weather data for the previous 7 days. The page is identified on the header. as <span style="font-weight: bolder;">'7 Day Review'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'hisbox'</span>. </p>
+
+<p>**Information displayed on each tile:**</p>
+<ol>
+<li>Date:</li>
+<li>Average Temperature:</li>
+<li>Rain Fall Total:</li>
+<li>Average Wind Speed:</li>
+<li>Average Humidity:</li> 
+</ol>
+
+<p> The tiles are arranged from most recent day, yesterday, backwards a 6 further days. The page also contains a 'tile' which shows three calculations made from data retrived.</p>
+<ol>
+<li> Rain fall total over the past 7days.</li>
+<li> Average temperature over the past 7days.</li>
+<li> Average humidity over the past 7days.</li>
+</ol>
+
+The data is generated from a fetch request to the relevant JSON data using the [getHistory.js](#getHistory) script. Using some of the values recieved some simple calculations are made to return values for the 7 day averages listed above.
+
+image here  xxxxxxxxxxxx
+
+<h4 style="color: orange; font-weight: bold">rain_chart.html</h4>
+
+<p>This page contains 5no. buttons. The page is referenced on the header. as <span style="font-weight: bolder;">'Charts'</span>. The page contains a div with the class of <span style="color: orange;">'button_container'</span>. The five buttons are located inside this div, the buttons have a class named <span style="color: orange;">'button'</span>. </p>
+<p>The page has a div which holds a canvas element where the selected chart is created. The canvas had an id of <span style="color: orange;">'myChart'</span>.
+
+<p>The buttons listed on this page are as follows.</p>
+<ol>
+<li>Precipation Total, total precipation for each of the previous 7 days displayed as a line chart.</li>
+<li>Temperature Averages, the average temperature for each of the previous 7 days displayed as a line chart.</li>
+<li>Sunshine Averages, the average levels of sunshine on each day over the previous 7 days.</li>
+<li>Wind Data Chart, this chart displays the highest gust, lowest gust and average wind speed recorded on the particular day.</li>
+<li>Download Chart, this button allows the user download the currently displayed chart as a png file.</li>
+</ol>
+
+I have written a seperate JavaScript for the first four buttons as follows;
+[rainChart.js](#rainChart)
+[tempChart.js](#tempChart)
+[solarChart.js](#solarChart)
+[windChart.js](#windChart)
+
+Each script fetchs the relevant JSON data and using Chart.js creates a line chart to display the data.
+
+image here xxxxxxxxxx
+
+
+<h4 id="rainChart" style="color: orange; font-weight: bold">rainChart.js</h4>
+<h4 id="tempChart" style="color: orange; font-weight: bold">tempChart.js</h4>
+<h4 id="solarChart" style="color: orange; font-weight: bold">solarChart.js</h4>
+<h4 id="windChart" style="color: orange; font-weight: bold">windChart.js</h4>
 
 
 
+
+
+
+
+<h4 id="getWeather" style="color: orange; font-weight: bold">getWeather.js</h4>
+
+<h4 id="getForecast" style="color: orange; font-weight: bold">forecast.js</h4>
+
+<h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
 
 
 

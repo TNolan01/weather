@@ -70,7 +70,7 @@ async function windChart() {
                 borderWidth: 2
                 },
                 {
-                    label: 'Wind speed daily average, km/hr',
+                    label: 'Wind speed daily low, km/hr',
                         data: [data.summaries[0].metric.windspeedAvg,
                         data.summaries[1].metric.windspeedLow,
                         data.summaries[2].metric.windspeedLow,
