@@ -1,6 +1,8 @@
 async function getWeather() {
     const response = await fetch('https://api.weather.com/v2/pws/observations/current?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
+
+    console.log(data);
      
     let pressure = data.observations[0].metric.pressure;
     let windSpeed = data.observations[0].metric.windSpeed;

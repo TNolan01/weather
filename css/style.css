@@ -28,10 +28,11 @@ h1 {
 
 .container {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 30%);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-   
+       
 } 
 
 .box {
@@ -110,6 +111,9 @@ h1 {
     padding: 3rem;
 }
 
+.footer a:hover {
+    color: orange
+}
 
 h5 {
     color: whitesmoke;
@@ -122,12 +126,13 @@ h5 {
     background-color: grey;
     padding: 2rem;
     text-align: center;
-    align-content: center;
-    align-items: center;
     position: relative; 
     display: table-cell;
     border: solid 5px orange;
     border-radius: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .fcbox span {
@@ -145,7 +150,7 @@ h5 {
     align-content: center;
     align-items: center;
     position: relative; 
-    display: table-cell;
+    display: inline-block;
     border: solid 5px orange;
     margin-left: auto;
     margin-right: auto; 
@@ -259,5 +264,12 @@ h5 {
     }
     .navbar {
         display: grid;
+    }
+    .footer a {
+        font-size: large;
+        font-weight: bolder;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 3rem;
     }
 }
