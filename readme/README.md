@@ -11,13 +11,13 @@
 
 1. [Project Scope](#project_scope)
 
-2. [Structure and Skeleton](#structure-and-skeleton)
+2. [Design & Stylings](#design)
 
-3. [Surface](#surface)
+3. [Structure](#structure)
 
 4. [Testing](#testing)
 
-4. [Deployment](#deployment)
+5. [Deployment](#deployment)
 
 6. [Project Credits](#project-credits)
 
@@ -64,10 +64,61 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 <li> Design and deploy a site to show the data in a simple accessible manner. </li>
 </ol>
 
+The site must be...
+<ol>
+<li> Simply to use with a clear uncluttered display which is easy to read. </li>
+<li> Responsive to use on smaller screens. </li>
+<li> Have a forecast / weather projection function. </li>
+</ol>
 
+## Design: <div id="design"><div> 
 
-
+#### Primary Coloring:
+<br>
+<ul>
+<li> Primary back-ground color is white to enhance brightest when used on small screen and/or outdoors and in dark conditions.</li>
+<li> Grey header and footer white text in white for clarity and contrast. </li>
+<li> Use of orange as high-light color. Orange is used to distinguish sections and values. I also used the orange color with the 'hover' property to show when the user is over a selectable option on the header and footer sections.
+<li> I used blue with the 'hover' property on the buttons on the Charts page to help distinguish which button the user is hovering over. </li>
+<li> The site has simple weather related logo in the top left hand corner of the screen.</li>
+</ul> 
  
+pic of colors here xxxxxxxxxxxxxx
+
+#### Structure:
+#### Site Structure:
+<p> The site is built with a HTML structure, with styling through CSS and with functionality coded with JavaScript. <p>
+<p> I am using Application Programming Interface, API, to coommunicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
+<p> Data displayed on the site is retrieved by JavaScript fetch request 
+
+<h4 id="header" style="color: orange; font-weight: bold">Header</h4>
+<p>The header is common across all html pages. The hmtl sturcture is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
+<p>The div has a class of <span style="color: orange;">'navbar'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
+
+image of header here xxxxxxxxxx
+
+<h4 style="color: orange; font-weight: bold">Footer</h4>
+<p>The header is also common across all html pages. The hmtl sturcture of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text * 'Copyright Tim Nolan Jan2022. This site was designed for educational purposes.' *</p>
+<p>This div has a class of <span style="color: orange;">' footer'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
+
+image of footer here xxxxxxx
+
+<h4 style="color: orange; font-weight: bold">Index.html</h4>
+
+<p> The index.html shows the current weather. The page is identified on the [Header](#header) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
+
+<p>The data displayed on tiles is retrived via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. <p>
+
+image of index.html xxxxxx
+
+The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time is retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
+
+image of date and time xxxxxxxxxxxxxx
+
+
+
+
+
 
 
 
