@@ -86,7 +86,7 @@ pic of colors here xxxxxxxxxxxxxx
 
 
 ## Structure:
-#### Site Structure:
+### Site Structure:
 <p> The site is built with a HTML structure, with styling through CSS and with functionality coded with JavaScript. <p>
 <p> I am using Application Programming Interface, API, to communicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
 <p> Data displayed on the site is retrieved by JavaScript fetch request 
@@ -107,7 +107,8 @@ image of footer here xxxxxxx
 
 <p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
 
-<p>The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. <p>
+he data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
+<p>On load this page displays a pop up box to give identify the position of the weather station and geographic area for which the data has relevance.</p>
 
 image of index.html xxxxxx
 
@@ -118,7 +119,8 @@ image of date and time xxxxxxxxxxxxxx
 <h4 style="color: orange; font-weight: bold">pws_map.html</h4>
 
 <p> The pws_map.html page contains the common header and footer elements along with a div with the id of <span style="color: orange;">'map'</span>. This id links to a Google Map's API function which renders a Google Map showing the position of weather station. The longitude and latitude used were retrieved from JSON data. </p>
-<p> There is also a span containing the longitude and latitude information. I have a text marker on the Google Map showing the words <span style="color: blue;">'Weather Station'</span>.
+<p>The script for the mapping is located in the head of the page. </p>
+<p> There is also a span containing the longitude and latitude information. I have a text marker on the Google Map showing the words <span style="color: lightblue;">'Weather Station'</span>.
 
 image here xxxxxxxxxxxxxxxxxxxxxx
 
@@ -183,26 +185,40 @@ I have written a separate JavaScript for the first four buttons as follows;
 [solarChart.js](#solarChart)
 [windChart.js](#windChart)
 
-Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data.
+Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data. The code for the download button is located in each of these JavaScripts.
 
 image here xxxxxxxxxx
+<br>
+
+#### **JavaScript**
+
+<h4 id="getWeather" style="color: orange; font-weight: bold">getWeather.js</h4>
+<p>With this script I am fetching JSON data relating to current weather conditions. I am creating variables for the particular data I require and returning these elements to the html with **document.getElementById**.</p>
+<p>I also convert the degree value of the wind direction into a cardinal position, primarily as the cardinal position will have more relevance to most people. Cardinal positions also read more clearly.</p>
+<p>There is a line of code here for the pop up/alert box to tell the user where the geographic location of the weather station and so the area for which the data is most relevant.</p>
+
+<h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
+<p>This script fetchs the JSON data arrays for each of the proceeding 7 days. I am picking certain data points and passing them in the html. I have three varibles created for some simple calculations to display 7 days averages for humidity, temperature and precipitation.</p>
+<p>I have added a Split and Trim alteration to time part of the data as supplied from the JSON array and just show the date only, this displays is far clearer and cleaner.</p>
+
+<h4 id="getForecast" style="color: orange; font-weight: bold">forecast.js</h4>
+<p>The forecasting script simply fetchs JSON data via an API which accesses JSON data from the wunderground.com forecasting model. The data is broken into array items marked as *daypart*. I am using four of these to give a 48 hour projected forecast.</p> 
 
 <h4 id="rainChart" style="color: orange; font-weight: bold">rainChart.js</h4>
 <h4 id="tempChart" style="color: orange; font-weight: bold">tempChart.js</h4>
 <h4 id="solarChart" style="color: orange; font-weight: bold">solarChart.js</h4>
 <h4 id="windChart" style="color: orange; font-weight: bold">windChart.js</h4>
+<p> These four scripts for the basis of rain_chart.html. All are similar in stucture. Fetching the required data and then rendering into a line graph with Chart.js.</p>
+<p> Other elements which form part of the functions that make up these scripts are as follows.</p>
+<ul>
+<li>Code to convert the date from the JSON format YYYY-MM-DD 00:00:00 to the relvant day name, ie. Monday, Tuesday etc. This is for the reason of clarity as the JSON date format would be to cluttered and unclear when shown on the graph.</li>
+<li>I have also included code to destory the 'canvas' prior to creating the new graph. With this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
+<li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts asks the user to confirm or cancel the download, if they have clicked the download button.</li> 
+</ul>
 
 
 
 
-
-
-
-<h4 id="getWeather" style="color: orange; font-weight: bold">getWeather.js</h4>
-
-<h4 id="getForecast" style="color: orange; font-weight: bold">forecast.js</h4>
-
-<h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
 
 
 
