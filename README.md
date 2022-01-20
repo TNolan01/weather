@@ -95,13 +95,15 @@ pic of colors here xxxxxxxxxxxxxx
 <p>The header is common across all html pages. The hmtl structure is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
 <p>The div has a class of <span style="color: orange;">'navbar'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
-image of header here xxxxxxxxxx
+<img title="header" alt="image of web page header" src="readme/header.png">
+<br>
 
 <h4 id="footerRef" style="color: orange; font-weight: bold">Footer</h4>
-<p>The header is also common across all html pages. The hmtl structure of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following text *Copyright Tim Nolan Jan2022. This site was designed for educational purposes.*</p>
+<p>The header is also common across all html pages. The hmtl structure of the footer is a div. This div contains 1no. anchor element which has a link to the relevant 'pws_map.html' page. There is also a H5 heading which contains the following the text 'Copyright Tim Nolan Jan2022. This site was designed for educational purposes.'</p>
 <p>This div has a class of <span style="color: orange;">' footer'</span> and this class identifies the div for the appropriate stylings in style.css file. </p>
 
-image of footer here xxxxxxx
+<img title="header" alt="image of web page header" src="readme/footer.png">
+<br>
 
 <h4 style="color: orange; font-weight: bold">index.html</h4>
 
@@ -110,11 +112,14 @@ image of footer here xxxxxxx
 he data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
 <p>On load this page displays a pop up box to give identify the position of the weather station and geographic area for which the data has relevance.</p>
 
-image of index.html xxxxxx
+<img title="header" alt="image of web page header" src="readme/current.png">
+<br>
 
 The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time is retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
 
-image of date and time xxxxxxxxxxxxxx
+<img title="header" alt="image of web page header" src="readme/time_date.png">
+<br>
+
 
 <h4 style="color: orange; font-weight: bold">pws_map.html</h4>
 
@@ -122,12 +127,16 @@ image of date and time xxxxxxxxxxxxxx
 <p>The script for the mapping is located in the head of the page. </p>
 <p> There is also a span containing the longitude and latitude information. I have a text marker on the Google Map showing the words <span style="color: lightblue;">'Weather Station'</span>.
 
-image here xxxxxxxxxxxxxxxxxxxxxx
+<img title="header" alt="image of web page header" src="readme/map.png">
+<br>
 
 <h4 style="color: orange; font-weight: bold">forecast.html</h4>
 
 <p> The forecast.html shows a projected 48hour forecast. The page is identified on the header. as <span style="font-weight: bolder;">'Outlook'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'fcbox'</span>. Each box again represents as a tile and contains a projected forecast for the local area. There are 4no. tiles each with the forecast of 12 hours.</p>
+
+<img title="header" alt="image of web page header" src="readme/outlook.png">
 <br>
+
 <ol>
 <li>Tonight - projected forecast for the next 12 hours +.</li>
 <li>Tomorrow - projected forecast for the period 13 to 24hours +.</li>
@@ -137,9 +146,6 @@ image here xxxxxxxxxxxxxxxxxxxxxx
 
 The forecast is generated from a fetch request to the relevant JSON data using the [forecast.js](#getForecast) script.
 The values are based on most current data.
-
-image here xxxxxxxxxxxxxxxxxxxxxxx
-
 
 <h4 style="color: orange; font-weight: bold">history.html</h4>
 
@@ -163,7 +169,8 @@ image here xxxxxxxxxxxxxxxxxxxxxxx
 
 The data is generated from a fetch request to the relevant JSON data using the [getHistory.js](#getHistory) script. Using some of the values received some simple calculations are made to return values for the 7 day averages listed above.
 
-image here  xxxxxxxxxxxx
+<img title="header" alt="image of web page header" src="readme/review.png">
+<br>
 
 <h4 style="color: orange; font-weight: bold">rain_chart.html</h4>
 
@@ -187,7 +194,16 @@ I have written a separate JavaScript for the first four buttons as follows;
 
 Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data. The code for the download button is located in each of these JavaScripts.
 
-image here xxxxxxxxxx
+<img title="header" alt="image of web page header" src="readme/charts.png">
+<br>
+<img title="header" alt="image of web page header" src="readme/windchart.png">
+<br>
+<p>Download prompt box.</p>
+<img title="header" alt="image of web page header" src="readme/dload_box.png">
+<br>
+<p>Example of downloaded chart.</p>
+<img title="header" alt="image of web page header" src="readme/weather_chart_example.png">
+<br>
 <br>
 
 #### **JavaScript**
@@ -215,8 +231,9 @@ image here xxxxxxxxxx
 <li>I have also included code to destory the 'canvas' prior to creating the new graph. With this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
 <li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts asks the user to confirm or cancel the download, if they have clicked the download button.</li> 
 </ul>
-
-
+<br>
+<br>
+## Testing: <div id="testing"><div> 
 
 
 
