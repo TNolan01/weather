@@ -1,3 +1,5 @@
+
+/*jshint esversion: 9 */ 
 async function solarChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
@@ -76,8 +78,7 @@ async function solarChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Solar Radiation Daily High Over Past 7 Days'
-                    ,
+                    text: 'Solar Radiation Daily High Over Past 7 Days',
                     font: {
                         size: 16,
                     }
@@ -102,5 +103,5 @@ async function solarChart() {
                  
             }
             
-    }
+    };
 }

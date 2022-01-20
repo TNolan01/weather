@@ -1,3 +1,5 @@
+
+/*jshint esversion: 9 */ 
 async function rainChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
@@ -75,8 +77,7 @@ async function rainChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Rainfall Totals Over Past 7days in mm'
-                    ,
+                    text: 'Rainfall Totals Over Past 7days in mm',
                     font: {
                         size: 16,
                     }
@@ -100,7 +101,7 @@ async function rainChart() {
               alert("Download cancelled");
                  
             }
-    }
+    };
 }        
 
 

@@ -1,4 +1,7 @@
+
+/*jshint esversion: 9 */ 
 async function getWeather() {
+    
     const response = await fetch('https://api.weather.com/v2/pws/observations/current?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
         
@@ -45,6 +48,6 @@ async function getWeather() {
 
     /* pop up introduction message */
     
-    alert('Welcome to Weather Now, weather data from a local weather station in Wexford. Please see location link at bottom of this page' )
+    alert('Welcome to Weather Now, weather data from a local weather station in Wexford. Please see location link at bottom of this page' );
 
 }

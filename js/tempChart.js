@@ -1,3 +1,4 @@
+/*jshint esversion: 9 */ 
 async function tempChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
@@ -76,8 +77,7 @@ async function tempChart() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Average Temperatures Over Past 7days / °C'
-                    ,
+                    text: 'Average Temperatures Over Past 7days / °C',
                     font: {
                         size: 16,
                     }
@@ -101,5 +101,5 @@ async function tempChart() {
               alert("Download cancelled");
                  
             }
-        }
+        };
 }

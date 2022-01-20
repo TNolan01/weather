@@ -1,4 +1,7 @@
+
+/*jshint esversion: 9 */ 
 async function getForecast() {
+    
     const response = await fetch('https://api.weather.com/v3/wx/forecast/daily/5day?geocode=52.525993,-6.565699&format=json&units=m&language=en-US&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
   
@@ -20,5 +23,4 @@ async function getForecast() {
     document.getElementById('daypartFC3').textContent = daypartFC3;
     document.getElementById('daypart4').textContent = daypart4;
     document.getElementById('daypartFC4').textContent = daypartFC4;
-
 }
