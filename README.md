@@ -81,9 +81,9 @@ The site must be...
 
 <p>Styling of the html structure is handled by the file located in the css folder. </p>
 
-pic of colors here xxxxxxxxxxxxxx
-
-
+<img title="header" alt="image of web page header" src="readme/color_scheme.png">
+<br>
+<br>
 
 ## Structure:
 ### Site Structure:
@@ -109,12 +109,15 @@ pic of colors here xxxxxxxxxxxxxx
 
 <p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
 
-he data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
+The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
 <p>On load this page displays a pop up box to give identify the position of the weather station and geographic area for which the data has relevance.</p>
 
 <img title="header" alt="image of web page header" src="readme/current.png">
 <br>
-
+<br>
+<p>Image of the pop up box.</p>
+<img title="header" alt="image of web page header" src="readme/intro_box.png">
+<br>
 The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time is retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
 
 <img title="header" alt="image of web page header" src="readme/time_date.png">
@@ -209,8 +212,8 @@ Each script fetch's the relevant JSON data and using Chart.js creates a line cha
 #### **JavaScript**
 
 <h4 id="getWeather" style="color: orange; font-weight: bold">getWeather.js</h4>
-<p>With this script I am fetching JSON data relating to current weather conditions. I am creating variables for the particular data I require and returning these elements to the html with **document.getElementById**.</p>
-<p>I also convert the degree value of the wind direction into a cardinal position, primarily as the cardinal position will have more relevance to most people. Cardinal positions also read more clearly.</p>
+With this script I am fetching JSON data relating to current weather conditions. I am creating variables for the particular data I require and returning these elements to the html with **document.getElementById**.
+<p>I also convert the degree value of the wind direction into a cardinal position, primarily as the cardinal position will have more relevance to most people. Cardinal positions also read more clearly. This is a simple code which I got from Stack Overflow.</p>
 <p>There is a line of code here for the pop up/alert box to tell the user where the geographic location of the weather station and so the area for which the data is most relevant.</p>
 
 <h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
@@ -232,8 +235,40 @@ Each script fetch's the relevant JSON data and using Chart.js creates a line cha
 <li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts asks the user to confirm or cancel the download, if they have clicked the download button.</li> 
 </ul>
 <br>
+
+## Testing: <div id="testing"></div> 
+
+### Validation Testing:
+<p> I have sucessfully passed the code through the following validators. </p>
+<ul>
+<li>W3 HTHL Validator : https://validator.w3.org/nu/?doc=https%3A%2F%2Ftnolan01.github.io%2Fweather%2F</li>
+<li>W3 CSS Validator : https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Ftnolan01.github.io%2Fweather%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en</li>
+<li>JS Hint Validator : Individual JavaScripts were passed through JsHint.</li>
+</ul>
+
+### Function Testing:
+<p> The site has been tested through the following browsers. </p>
+<ul>
+<li> Google Chrome </li>
+<li> Fire Fox </li>
+<li> Microsoft Edge </li>
+</ul>
 <br>
-## Testing: <div id="testing"><div> 
+<p> Function of the site was tested on the following devices and screens during the development</p>
+<ul>
+<li> Windows 10 Desktop PC with 24" LCD </li>
+<li> Windows 10 Laptop with 14" LCD </li>
+<li> Motorola G8 Android Phone </li>
+<li> Motorola G10 Android Phone </li>
+
+</ul>
+### Identified Issues:
+I now list some of the bugs and issues I have encounter and there current status.
+<ol>
+<li> The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. This is an old phone and very out of date, the associated Apple Account is no longer valid and the phone has not been updated for 24 months. </li>
+<li> There is short 10(+/-) minute period at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next. This </li> 
+</ol>
+
 
 
 

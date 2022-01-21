@@ -48,6 +48,6 @@ async function getWeather() {
 
     /* pop up introduction message */
     
-    alert('Welcome to Weather Now, weather data from a local weather station in Wexford. Please see location link at bottom of this page' );
+    alert('Welcome to Weather Now, this site displays weather data from a local weather station in Wexford, Ireland. Please see location link at bottom of this page for a map location.' );
 
 }

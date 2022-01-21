@@ -88,6 +88,7 @@ async function rainChart() {
     });
     var image = myChart.toBase64Image();  /* variable for chart image */
     
+    /* download function and pop up box */
     document.getElementById('btn-download').onclick = function() {
        
             let confirmAction = confirm("Are you sure you want to download this chart?");
