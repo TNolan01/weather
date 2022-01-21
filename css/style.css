@@ -233,6 +233,7 @@ h5 {
         grid-auto-rows: minmax(auto, auto);
 
   }
+  
 }
 
 @media screen and (max-width: 980px) {
@@ -247,6 +248,7 @@ h5 {
         color: orange;
         font-size: large;
     }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -282,25 +284,3 @@ h5 {
 }
 
 
-/* IPHONE */
-@media screen and (device-height: 568px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    .navbar a {
-        font-size: x-large;
-        color: whitesmoke;
-        text-decoration: none;
-    }
-    .navbar a:hover {
-        color: orange;
-        font-size: x-large;
-    }
-    .navbar {
-        display: grid;
-    }
-    .footer a {
-        font-size: large;
-        font-weight: bolder;
-        color: whitesmoke;
-        text-decoration: none;
-        padding: 3rem;
-    }
-}

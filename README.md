@@ -190,9 +190,17 @@ The data is generated from a fetch request to the relevant JSON data using the [
 </ol>
 
 I have written a separate JavaScript for the first four buttons as follows;
+<br>
+
 [rainChart.js](#rainChart)
+<br>
+
 [tempChart.js](#tempChart)
+<br>
+
 [solarChart.js](#solarChart)
+<br>
+
 [windChart.js](#windChart)
 
 Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data. The code for the download button is located in each of these JavaScripts.
@@ -240,11 +248,13 @@ With this script I am fetching JSON data relating to current weather conditions.
 
 ### Validation Testing:
 <p> I have sucessfully passed the code through the following validators. </p>
-<ul>
-<li>W3 HTHL Validator : https://validator.w3.org/nu/?doc=https%3A%2F%2Ftnolan01.github.io%2Fweather%2F</li>
-<li>W3 CSS Validator : https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Ftnolan01.github.io%2Fweather%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en</li>
-<li>JS Hint Validator : Individual JavaScripts were passed through JsHint.</li>
-</ul>
+
+W3 HTHL Validator : [HMTL Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftnolan01.github.io%2Fweather%2F) 
+
+W3 CSS Validator : [CSS Results](https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Ftnolan01.github.io%2Fweather%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) 
+
+JS Hint Validator : Individual JavaScripts were passed through JsHint.
+
 
 ### Function Testing:
 <p> The site has been tested through the following browsers. </p>
@@ -252,22 +262,42 @@ With this script I am fetching JSON data relating to current weather conditions.
 <li> Google Chrome </li>
 <li> Fire Fox </li>
 <li> Microsoft Edge </li>
+<li> Amazon Silk </li>
+<li> Apple Safari </li>
 </ul>
 <br>
-<p> Function of the site was tested on the following devices and screens during the development</p>
+<p> Function of the site was tested on the following devices during the development</p>
 <ul>
 <li> Windows 10 Desktop PC with 24" LCD </li>
 <li> Windows 10 Laptop with 14" LCD </li>
 <li> Motorola G8 Android Phone </li>
 <li> Motorola G10 Android Phone </li>
+<li> Apple Iphone 12 </li>
+<li> Samsung Tab A 10.1" Tablet </li>
+<li> Amazon Fire 10" HD Tablet </li>
+
 
 </ul>
+
 ### Identified Issues:
 I now list some of the bugs and issues I have encounter and there current status.
+<br>
+**IPhone 5 Issue:**
+<br>
+The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released.
+
+<span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li> The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. This is an old phone and very out of date, the associated Apple Account is no longer valid and the phone has not been updated for 24 months. </li>
-<li> There is short 10(+/-) minute period at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next. This </li> 
+<li>I tried to write a media query to directly target the Iphone 5 screen on min and max width, this was unsucessful.</li>
+<li>I experimented with a simpler chart and HTML but this did not render on the IPhone 5s  </li>
 </ol>
+<span style="color: blue; font-weight: bold;">Current Status:</span>
+<p> This issue is unresolved. I believe it is more than likely an issue with a combination of this particular phone and the OS which has not updated for 24 months approximatley. As the website is functional on the more recent and current of Apple IOS I do not think it is feasible to pursue further changes and updates to solve an issue which maybe applicable to this device only.</p> 
+<br>
+
+
+ There is short 10(+/-) minute period at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next. This 
+
 
 
 
