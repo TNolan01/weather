@@ -2,11 +2,11 @@
 # WeatherNow
 ### Deployed Site : https://tnolan01.github.io/weather/
 <br>
-<img title="top_graphoc" alt="image of web site diplayed on multiple devices" src="readme/top_graphic.png">
+<img title="top_graphic" alt="image of web site displayed on multiple devices" src="readme/top_graphic.png">
 <br>
 
 ### Introduction:
-*WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via an API and displays the information in a more user friendly and exact format.*
+*WeatherNow is a website designed using HTML, CSS and JavaScript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via an API and displays the information in a more user friendly and exact format.*
 
 <br>
 
@@ -25,7 +25,9 @@
 
 5. [Deployment & Cloning](#deployment)
 
-6. [Project Credits](#project-credits)
+6. [Technologies Used](#tech)
+
+7. [Project Credits](#credits)
 
 <br>
 
@@ -33,10 +35,10 @@
 
 ### User Stories:
 
-<p>Farmer Browne has just purchased a new farm, a 250-hectare block of land in the 'Sunny' Southeast corner of Ireland, Co. Wexford. This parcel of ground is approximatley 40 kilometres from Farmer Brownes main center of operations but the quality of the land makes it excellent for food production.
-Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage in rotation with Barley. Important factors for Farmer Browne to consider from the sowing to harvesting cycles of these crops would be as follows:</p>
+<p>Farmer Browne has just purchased a new farm, a 250-hectare block of land in the 'Sunny' Southeast corner of Ireland, Co. Wexford. This parcel of ground is approximately 40 kilometers from Farmer Brownes main center of operations, but the quality of the land makes it excellent for food production.
+Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage in rotation with Barley. Key factors for Farmer Browne to consider from the sowing to harvesting cycles of these crops would be as follows:</p>
 <ul>
-<li> Recent precipation totals.</li>
+<li> Recent precipitation totals.</li>
 <li> Recent temperature range. </li>
 <li> Humidity levels.</li>
 <li> Wind strength and direction. </li>
@@ -49,7 +51,7 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 <li> Deciding where and when to send his employees to harvest vegetables, many of which are still hand cut and very labour intensive.</li>
 <li> Deciding on when and if he can spray crops.</li>
 <li> Deciding on most suitable harvesting times.</li>
-<li> Deciding if recent levels of precipitation have left the ground to soft to travel on or are insufficent for crop growth. </li>
+<li> Deciding if recent levels of precipitation have left the ground to soft to travel on or are insufficient for crop growth. </li>
 </ul>
 
 <p> The website will also be accessible to anyone in the area, other farmers, local residents etc. 
@@ -58,7 +60,7 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 <p> Luckily for Farmer Browne a property adjoining his new land has a PWS which is active and uploading weather data to the Weather Underground website.</p>
 
 ### Scope:
-*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80 kilometer round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys has staff and where and when he sends his machinery, equipment which is slow and expensive and would consume a lot of diesel on the 80 kilometre trip.*
+*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80-kilometer round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys has staff and where and when he sends his machinery, equipment which is slow and expensive and would consume a lot of diesel on the 80-kilometer trip.*
 
 <ol>
 <li> Ascertain the information the end user, Farmer Browne, requires. </li>
@@ -82,26 +84,31 @@ The site must be...
 #### Primary Coloring:
 <br>
 <ul>
-<li> Primary back-ground color is white to enhance brightest when used on small screen and/or outdoors and in dark conditions.</li>
-<li> Grey header and footer white text in white for clarity and contrast. </li>
+<li> The primary back-ground color is white to enhance brightest when used on small screen and/or outdoors and in dark conditions.</li>
+<li> Grey header and footer white text in white for clarity and contrast and frame the begining and end of the data section.  </li>
 <li> Use of orange as high-light color. Orange is used to distinguish sections and values. I also used the orange color with the 'hover' property to show when the user is over a selectable option on the header and footer sections.
 <li> I used blue with the 'hover' property on the buttons on the Charts page to help distinguish which button the user is hovering over. </li>
 <li> The site has simple weather-related logo in the top left-hand corner of the screen.</li>
 </ul> 
 
-<p>Styling of the html structure is handled by the file located in the css folder. </p>
-
 <img title="header" alt="image of web page header" src="readme/color_scheme.png">
 <br>
 <br>
 
+#### Font:
+<br>
+<p> I am using a font called <span style="color: lightblue;">'Titillium Web'</span> from Google Fonts.
+
+<p>Styling of the html structure is handled by the file located in the css folder. </p>
+<br>
+<br>
 [Back to Contents](#contents)
 
 ## Structure:
 ### Site Structure:
-<p> The site is built with a HTML structure, with styling through CSS and with functionality coded with JavaScript. <p>
+<p> The site is built with a HTML structure, with styling through CSS and with the functionality coded with JavaScript. <p>
 <p> I am using Application Programming Interface, API, to communicate with <wunderground.com> and retrieve JSON data relating to a particular weather station. </p>
-<p> Data displayed on the site is retrieved by JavaScript fetch request 
+<p> Data displayed on the site is retrieved by JavaScript fetch requests</p> 
 
 <h4 id="headerRef" style="color: orange; font-weight: bold">Header</h4>
 <p>The header is common across all html pages. The hmtl structure is a div which contains 4no. anchor elements containing links to the relevant html pages.</p>
@@ -119,10 +126,10 @@ The site must be...
 
 <h4 style="color: orange; font-weight: bold">index.html</h4>
 
-<p> The index.html shows the current weather. The page is identified on the [Header](#headerRef) as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on most current data. I am using a grid structure to make these div's responsive. The box div's present as seperate tiles. </p>
+<p> The index.html shows the current weather. The page is identified on the header as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on the most current data. I am using a grid structure to make these div's responsive. The box div's present as separate tiles. </p>
 
 The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
-<p>On load this page displays a pop up box to give identify the position of the weather station and geographic area for which the data has relevance.</p>
+<p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance.</p>
 
 <img title="header" alt="image of web page header" src="readme/current.png">
 <br>
@@ -130,7 +137,7 @@ The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) Ja
 <p>Image of the pop up box.</p>
 <img title="header" alt="image of web page header" src="readme/intro_box.png">
 <br>
-The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time is retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
+The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time are retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
 
 <img title="header" alt="image of web page header" src="readme/time_date.png">
 <br>
@@ -164,7 +171,7 @@ The values are based on most current data.
 
 <h4 style="color: orange; font-weight: bold">history.html</h4>
 
-<p> The history.html shows a summary of weather data for the previous 7 days. The page is identified on the header. as <span style="font-weight: bolder;">'7 Day Review'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'hisbox'</span>. </p>
+<p> The history.html shows a summary of weather data for the previous 7 days. The page is identified on the header as <span style="font-weight: bolder;">'7 Day Review'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'hisbox'</span>. </p>
 
 <p>**Information displayed on each tile:**</p>
 <ol>
@@ -175,7 +182,7 @@ The values are based on most current data.
 <li>Average Humidity:</li> 
 </ol>
 
-<p> The tiles are arranged from most recent day, yesterday, backwards a 6 further days. The page also contains a 'tile' which shows three calculations made from data retrieved.</p>
+<p> The tiles are arranged from most recent day, yesterday, backwards 6 further days. The page also contains a 'tile' which shows three calculations made from data retrieved.</p>
 <ol>
 <li> Rain fall total over the past 7days.</li>
 <li> Average temperature over the past 7days.</li>
@@ -240,7 +247,7 @@ With this script I am fetching JSON data relating to current weather conditions.
 <p>There is a line of code here for the pop up/alert box to tell the user where the geographic location of the weather station and so the area for which the data is most relevant.</p>
 
 <h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
-<p>This script fetchs the JSON data arrays for each of the proceeding 7 days. I am picking certain data points and passing them in the html. I have three varibles created for some simple calculations to display 7 days averages for humidity, temperature and precipitation.</p>
+<p>This script fetchs the JSON data arrays for each of the proceeding 7 days. I am picking certain data points and passing them in the html. I have three variables created for some simple calculations to display 7 days averages for humidity, temperature and precipitation.</p>
 <p>I have added a Split and Trim alteration to time part of the data as supplied from the JSON array and just show the date only, this displays is far clearer and cleaner.</p>
 
 <h4 id="getForecast" style="color: orange; font-weight: bold">forecast.js</h4>
@@ -250,11 +257,11 @@ With this script I am fetching JSON data relating to current weather conditions.
 <h4 id="tempChart" style="color: orange; font-weight: bold">tempChart.js</h4>
 <h4 id="solarChart" style="color: orange; font-weight: bold">solarChart.js</h4>
 <h4 id="windChart" style="color: orange; font-weight: bold">windChart.js</h4>
-<p> These four scripts for the basis of rain_chart.html. All are similar in stucture. Fetching the required data and then rendering into a line graph with Chart.js.</p>
+<p> These four scripts for the basis of rain_chart.html. All are similar in structure. Fetching the required data and then rendering into a line graph with Chart.js.</p>
 <p> Other elements which form part of the functions that make up these scripts are as follows.</p>
 <ul>
 <li>Code to convert the date from the JSON format YYYY-MM-DD 00:00:00 to the relvant day name, ie. Monday, Tuesday etc. This is for the reason of clarity as the JSON date format would be to cluttered and unclear when shown on the graph.</li>
-<li>I have also included code to destory the 'canvas' prior to creating the new graph. With this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
+<li>I have also included code to destroy the 'canvas' prior to creating the new graph. With this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
 <li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts asks the user to confirm or cancel the download, if they have clicked the download button.</li> 
 </ul>
 <br>
@@ -265,14 +272,24 @@ With this script I am fetching JSON data relating to current weather conditions.
 ## Testing: <div id="testing"></div> 
 
 ### Validation Testing:
-<p> I have sucessfully passed the code through the following validators. </p>
+<p> I have successfully passed the code through the following validators. </p>
 
 W3 HTHL Validator : [HMTL Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftnolan01.github.io%2Fweather%2F) 
 
 W3 CSS Validator : [CSS Results](https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Ftnolan01.github.io%2Fweather%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) 
 
 JS Hint Validator : Individual JavaScripts were passed through JsHint.
+<br>
+<br>
+<img title="jshint" alt="sample from JS Hint" src="readme/jhint.png">
+<br>
 
+The site was tested through the web.dev site.
+<br>
+<br>
+<img title="header" alt="image of web page header" src="readme/lighthouse.png">
+
+<br>
 
 ### Function Testing:
 <p> The site has been tested through the following browsers. </p>
@@ -290,19 +307,19 @@ JS Hint Validator : Individual JavaScripts were passed through JsHint.
 <li> Windows 10 Laptop with 14" LCD </li>
 <li> Motorola G8 Android Phone </li>
 <li> Motorola G10 Android Phone </li>
-<li> Apple Iphone 12 </li>
+<li> Apple iPhone 12 </li>
 <li> Samsung Tab A 10.1" Tablet </li>
 <li> Amazon Fire 10" HD Tablet </li>
 </ul>
 <br>
 
 ### Identified Issues & Bugs:
-I now list some of the bugs and issues I have encounter and there current status.
+I now list some of the bugs and issues I have encounter and their current status.
 <br>
 <br>
-**IPhone 5 Issue:**
+**iPhone 5 Issue:**
 <br>
-The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are were rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. The Safaris browser is also out of date.
+The charts did not display on an Apple iPhone 5s. The rest of the site and related JSON data worked and displayed but the charts were not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. The Safaris browser is also out of date.
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
@@ -310,17 +327,17 @@ The charts did not display on an Apple IPhone 5s. The rest of the site and relat
 <li>I experimented with a simpler chart and HTML but this did not render on the IPhone 5s  </li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
-<p> This issue is unresolved. I believe it is more than likely an issue with a combination of this particular phone and the out of date OS and browers software. The software on this device has not updated for 24 months approximatley. As the website is functional on the more recent and current of Apple IOS driven devices I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
+<p> This issue is unresolved. It is more than likely an issue with a combination of this particular phone and the out-of-date OS and Brower software. The software on this device has not updated for 24 months approximately. As the website is functional on the more recent and current of Apple IOS driven devices, I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
 <br>
 
 **JSON Data Availability:**
 <br>
-<p>There is short period of (+/-)10 minute at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next where the data is unavailble. </p>
+<p>There is short period of (+/-)10 minute at approximately 00:00 while the JSON data on the Weather Underground website changes over from one day into the next where the data is unavailable. </p>
 <p>I discovered this by accident while working on the project let one night.</p>
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li> At 30-Jan-22, I will have to test the site at 00:00 and indentify the relevant error message via console log and code of form an IF/ELSE statement to test that JSON data is available.</li>
+<li> At 30-Jan-22, I will have to test the site at 00:00 and identify the relevant error message via console log and code of form an IF/ELSE statement to test that JSON data is available.</li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
 <p>Unresolved.</p>
@@ -328,7 +345,7 @@ The charts did not display on an Apple IPhone 5s. The rest of the site and relat
 
 **Clearing The Canvas:**
 <br>
-<p>I wanted to have the charts all render on the same canvas on the rain_chart.html. To do this, it is necessary to 'destory' the canvas and its present chart prior to creating the new chart.<p>
+<p>I wanted to have the charts all render on the same canvas on the rain_chart.html. To do this, it is necessary to 'destroy' the canvas and its present chart prior to creating the new chart.<p>
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
 <li> After checking the Chart.JS documentation and trying code fixes in the JavaScript and researching the function I found a simple fix for this with single line of code from Stack Overflow.</li>
@@ -336,7 +353,7 @@ The charts did not display on an Apple IPhone 5s. The rest of the site and relat
 <span style="color: blue; font-weight: bold;">Current Status:</span>
 <p>This issue was resolved.</p>
 
-<img title="canvas_clear" alt="image of code to destory canvas" src="readme/canvas_destory.png">
+<img title="canvas_clear" alt="image of code to destroy canvas" src="readme/canvas_destory.png">
 
 <br>
 
@@ -357,7 +374,7 @@ This was coded through GitPod and deployed to GitHub pages. An outline of the de
 <br>
 Live Link : https://tnolan01.github.io/weather
 
-## Cloning:
+### Cloning:
 
 
 [Click here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
@@ -376,8 +393,42 @@ Live Link : https://tnolan01.github.io/weather
 7. Press Enter. Your local clone will be created.
 
 [Back to Contents](#contents)
+<br>
+<br>
+
+## Technologies Used: <div id="tech"></div>
+### Languages
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+### Libraries & Frameworks
+- [Google fonts](https://fonts.google.com/)
+
+### APIs
+- Google Developer Map API
+- [WunderGround](https://www.wunderground.com/)
+
+### Tools
+
+- [GitPod](https://gitpod.io/)
+- [GitHub](https://github.com/)
+
+<br>
+
+[Back to Contents](#contents)
+<br>
+
+## Credits: <div id="credits"></div> 
 
 
+- [W3Schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- I used two pieces of code from Stack Overflow. The code to convert compass degrees to cardinal points and the code to 'destroy' the canvas.
+- Code Institute.
+- My CI mentor Guido Cecilio Garcia Bernal.
+- [Coding Train](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw) , particularly the API videos.
 
 
 
