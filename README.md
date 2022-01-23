@@ -1,6 +1,9 @@
-![CI logo](/Media/weatherlogo.png)
+![CI logo](/media/weatherlogo.png)
 # WeatherNow
 ### Deployed Site : https://tnolan01.github.io/weather/
+<br>
+<img title="top_graphoc" alt="image of web site diplayed on multiple devices" src="readme/top_graphic.png">
+<br>
 
 ### Introduction:
 *WeatherNow is a website designed using HTML, CSS and Javascript. The primary function of which is to extract real-time and historical weather data from a particular private weather station. The private weather station, PWS, uploads data to a website called Weather Underground, https://www.wunderground.com/.  WeatherNow extracts that data from wunderground.com via an API and displays the information in a more user friendly and exact format.*
@@ -8,6 +11,9 @@
 <br>
 
 # Project Outline
+<br>
+
+<div id="contents" style="font-weight: bold;">Contents:</div>
 
 1. [Project Scope](#project_scope)
 
@@ -17,13 +23,13 @@
 
 4. [Testing](#testing)
 
-5. [Deployment](#deployment)
+5. [Deployment & Cloning](#deployment)
 
 6. [Project Credits](#project-credits)
 
 <br>
 
-## Project Scope: <div id="project_scope"><div> 
+## Project Scope: <div id="project_scope"></div> 
 
 ### User Stories:
 
@@ -67,7 +73,11 @@ The site must be...
 <li> Have a forecast / weather projection function. </li>
 </ol>
 
-## Design: <div id="design"><div> 
+
+[Back to Contents](#contents)
+
+
+## Design: <div id="design"></div> 
 
 #### Primary Coloring:
 <br>
@@ -84,6 +94,8 @@ The site must be...
 <img title="header" alt="image of web page header" src="readme/color_scheme.png">
 <br>
 <br>
+
+[Back to Contents](#contents)
 
 ## Structure:
 ### Site Structure:
@@ -205,15 +217,18 @@ I have written a separate JavaScript for the first four buttons as follows;
 
 Each script fetch's the relevant JSON data and using Chart.js creates a line chart to display the data. The code for the download button is located in each of these JavaScripts.
 
-<img title="header" alt="image of web page header" src="readme/charts.png">
+<img title="charts" alt="image of web page header" src="readme/charts.png">
 <br>
-<img title="header" alt="image of web page header" src="readme/windchart.png">
+<img title="wind_chart" alt="image of web page header" src="readme/windchart.png">
 <br>
 <p>Download prompt box.</p>
-<img title="header" alt="image of web page header" src="readme/dload_box.png">
+<img title="dload_box" alt="image of web page header" src="readme/dload_box.png">
 <br>
 <p>Example of downloaded chart.</p>
-<img title="header" alt="image of web page header" src="readme/weather_chart_example.png">
+<img title="graph" alt="image of web page header" src="readme/weather_chart_example.png">
+<br>
+<p>Screen shot from IPhone 12.</p>
+<img title="iphone" alt="image of I Phone 12 screen shot" src="readme/iphone_shot.png" style="width:300px;height:600px;">
 <br>
 <br>
 
@@ -244,6 +259,9 @@ With this script I am fetching JSON data relating to current weather conditions.
 </ul>
 <br>
 
+[Back to Contents](#contents)
+<br>
+
 ## Testing: <div id="testing"></div> 
 
 ### Validation Testing:
@@ -260,13 +278,13 @@ JS Hint Validator : Individual JavaScripts were passed through JsHint.
 <p> The site has been tested through the following browsers. </p>
 <ul>
 <li> Google Chrome </li>
+<li> Apple Safari</li>
 <li> Fire Fox </li>
-<li> Microsoft Edge </li>
 <li> Amazon Silk </li>
-<li> Apple Safari </li>
+<li> Microsoft Edge </li>
 </ul>
 <br>
-<p> Function of the site was tested on the following devices during the development</p>
+<p> Function of the site was tested on the following devices during the development:</p>
 <ul>
 <li> Windows 10 Desktop PC with 24" LCD </li>
 <li> Windows 10 Laptop with 14" LCD </li>
@@ -275,16 +293,16 @@ JS Hint Validator : Individual JavaScripts were passed through JsHint.
 <li> Apple Iphone 12 </li>
 <li> Samsung Tab A 10.1" Tablet </li>
 <li> Amazon Fire 10" HD Tablet </li>
-
-
 </ul>
+<br>
 
-### Identified Issues:
+### Identified Issues & Bugs:
 I now list some of the bugs and issues I have encounter and there current status.
+<br>
 <br>
 **IPhone 5 Issue:**
 <br>
-The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released.
+The charts did not display on an Apple IPhone 5s. The rest of the site and related JSON data worked and displayed but the charts are were rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. The Safaris browser is also out of date.
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
@@ -292,12 +310,72 @@ The charts did not display on an Apple IPhone 5s. The rest of the site and relat
 <li>I experimented with a simpler chart and HTML but this did not render on the IPhone 5s  </li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
-<p> This issue is unresolved. I believe it is more than likely an issue with a combination of this particular phone and the OS which has not updated for 24 months approximatley. As the website is functional on the more recent and current of Apple IOS I do not think it is feasible to pursue further changes and updates to solve an issue which maybe applicable to this device only.</p> 
+<p> This issue is unresolved. I believe it is more than likely an issue with a combination of this particular phone and the out of date OS and browers software. The software on this device has not updated for 24 months approximatley. As the website is functional on the more recent and current of Apple IOS driven devices I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
 <br>
 
+**JSON Data Availability:**
+<br>
+<p>There is short period of (+/-)10 minute at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next where the data is unavailble. </p>
+<p>I discovered this by accident while working on the project let one night.</p>
 
- There is short 10(+/-) minute period at approximatley 00:00 while the JSON data on the Weather Underground website changes over from one day into the next. This 
+<span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
+<ol>
+<li> At 30-Jan-22, I will have to test the site at 00:00 and indentify the relevant error message via console log and code of form an IF/ELSE statement to test that JSON data is available.</li>
+</ol>
+<span style="color: blue; font-weight: bold;">Current Status:</span>
+<p>Unresolved.</p>
+<br>
 
+**Clearing The Canvas:**
+<br>
+<p>I wanted to have the charts all render on the same canvas on the rain_chart.html. To do this, it is necessary to 'destory' the canvas and its present chart prior to creating the new chart.<p>
+<span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
+<ol>
+<li> After checking the Chart.JS documentation and trying code fixes in the JavaScript and researching the function I found a simple fix for this with single line of code from Stack Overflow.</li>
+</ol>
+<span style="color: blue; font-weight: bold;">Current Status:</span>
+<p>This issue was resolved.</p>
+
+<img title="canvas_clear" alt="image of code to destory canvas" src="readme/canvas_destory.png">
+
+<br>
+
+[Back to Contents](#contents)
+<br>
+
+## Deployment: <div id="deployment"><div> 
+
+This was coded through GitPod and deployed to GitHub pages. An outline of the deployment procedure is as follows:
+* In the GitHub repository select the Settings tab on the bar, it is the last item.
+* In the drop-down menu on left select the 'Pages', this is presently 2nd from bottom on the menu. 
+* In the 'Source' section at the top of the 'GitHub Pages' select Branch as 'Main'.
+* A green box should appear above the 'Source' section with an refreshed ribbon to indicate the site has been successfully deployed and showing the address to which it is published.
+<br>
+
+<img title="git_deploy" alt="image of GitHub settings screen" src="readme/github_deploy.png">
+
+<br>
+Live Link : https://tnolan01.github.io/weather
+
+## Cloning:
+
+
+[Click here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+1. Log in to GitHub and locate the [GitHub Repository] https://github.com/TNolan01/weather
+2. Under the repository name, click "Code".
+3. To clone the repository using HTTPS. Under "HTTPS" copy the link.
+4. Go to your local terminal with git installed
+5. Change the current working directory to the location where you want the cloned directory to be created/located.
+6. Type `git clone` and then you paste in the URL you copied in Step 3.
+
+  ```
+  $ git clone https://github.com/TNolan01/weather.git
+  ```
+
+7. Press Enter. Your local clone will be created.
+
+[Back to Contents](#contents)
 
 
 
