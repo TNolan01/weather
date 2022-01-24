@@ -8,7 +8,7 @@ async function windChart() {
     /* convert date and time into a day referencce for chart label */
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (i=0; i<7; i++) {
-        console.log(data.summaries[i].obsTimeLocal);
+        /* console.log(data.summaries[i].obsTimeLocal); */
         let date = data.summaries[i].obsTimeLocal;  
         let today= days[new Date(date).getDay()];
         console.log(today);
