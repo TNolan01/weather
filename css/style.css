@@ -198,8 +198,7 @@ h5 {
 }
 
 .button:hover {
-    border-color: rgb(0, 119, 255);
-    border: 4px ridge;
+    border: 6px solid rgb(0, 119, 255)
 }
 
 /* pws_html */

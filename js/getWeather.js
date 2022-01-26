@@ -9,8 +9,8 @@ async function getWeather() {
     let windSpeed = data.observations[0].metric.windSpeed;
     let windGust = data.observations[0].metric.windGust;
     let temp = data.observations[0].metric.temp;
-    let precip_rate = data.observations[0].metric.precipRate;
-    let precip_total = data.observations[0].metric.precipTotal;
+    let precipRate = data.observations[0].metric.precipRate;
+    let precipTotal = data.observations[0].metric.precipTotal;
     let uv_index = data.observations[0].uv;
     let humidity = data.observations[0].humidity;
     let windDir = data.observations[0].winddir;
@@ -25,14 +25,14 @@ async function getWeather() {
     deg = Math.round(deg, 0);
     // Ensure it's within 0-7
     deg = (deg + 8) % 8;
-    console.log(directions[deg]);
+    
 
     document.getElementById('press').textContent = pressure;
     document.getElementById('windspeed').textContent = windSpeed; 
     document.getElementById('windgust').textContent = windGust;
     document.getElementById('temp').textContent = temp; 
-    document.getElementById('precip_rate').textContent = precip_rate; 
-    document.getElementById('precip_total').textContent = precip_total;
+    document.getElementById('precip_rate').textContent = precipRate; 
+    document.getElementById('precip_total').textContent = precipTotal;
     document.getElementById('uv').textContent = uv_index;
     document.getElementById('humidity').textContent = humidity;
     document.getElementById('winddir').textContent = windDir;
@@ -48,6 +48,19 @@ async function getWeather() {
 
     /* pop up introduction message */
     
-    alert('Welcome to Weather Now, this site displays weather data from a local weather station in Wexford, Ireland. Please see location link at bottom of this page for a map location.' );
+    /* alert('Welcome to Weather Now, this site displays weather data from a local weather station in Wexford, Ireland. Please see location link at bottom of this page for a map location.' ); */
+    
+    popup('Hello');
+    
+    if(!localStorage.getItem('popupShown')) {
+        
+    }
+    else {localStorage.setItem('popupShown', 'true');
+}
+ 
+   
+
+
+
 
 }
