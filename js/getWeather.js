@@ -47,20 +47,13 @@ async function getWeather() {
     console.log(dt);
 
     /* pop up introduction message */
-    
-    /* alert('Welcome to Weather Now, this site displays weather data from a local weather station in Wexford, Ireland. Please see location link at bottom of this page for a map location.' ); */
-    
-    popup('Hello');
-    
-    if(!localStorage.getItem('popupShown')) {
-        
-    }
-    else {localStorage.setItem('popupShown', 'true');
+    /* localstorage used to stop message reappearing everytime the user opens in index.html */    
+    if(localStorage.getItem("firstTime")==null){
+        alert("Welcome to WeatherNow, live weather data from a weather station in Wexford Ireland. See location map located in footer.");
+        localStorage.setItem("firstTime","done");
+     }
+     
+  
 }
  
    
-
-
-
-
-}

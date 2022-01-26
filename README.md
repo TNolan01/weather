@@ -132,7 +132,7 @@ The site must be...
 ``` <meta http-equiv="refresh" content="120"> ```
 
 The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
-<p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance.</p>
+<p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance. There is code make sure this message is only displayed the first time the user visits the site via localstorage.</p>
 
 <img title="header" alt="image of web page header" src="readme/current.png">
 <br>
@@ -200,7 +200,7 @@ The data is generated from a fetch request to the relevant JSON data using the [
 
 <h4 style="color: orange; font-weight: bold">rain_chart.html</h4>
 
-<p>This page contains 5no. buttons. The page is referenced on the header. as <span style="font-weight: bolder;">'Charts'</span>. The page contains a div with the class of <span style="color: orange;">'button_container'</span>. The five buttons are located inside this div, the buttons have a class named <span style="color: orange;">'button'</span>. </p>
+<p>This page contains 5no. buttons. The page is referenced on the header. as <span style="font-weight: bolder;">'Charts'</span>. The page contains a div with the class of <span style="color: orange;">'button_container'</span>. The five buttons are located inside this div, the buttons have a class named <span style="color: orange;">'button'</span>. The buttons have an orange border which changes to blue upon hovering over the relevant button.</p>
 <p>The page has a div which holds a canvas element where the selected chart is created. The canvas had an id of <span style="color: orange;">'myChart'</span>.
 
 <p>The buttons listed on this page are as follows.</p>
