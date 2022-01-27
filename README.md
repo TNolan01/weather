@@ -334,17 +334,18 @@ The charts did not display on an Apple iPhone 5s. The rest of the site and relat
 <p> This issue is unresolved. It is more than likely an issue with a combination of this particular phone and the out-of-date OS and Brower software. The software on this device has not updated for 24 months approximately. As the website is functional on the more recent and current of Apple IOS driven devices, I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
 <br>
 
-**JSON Data Availability:**
+**JSON Data Availability ?:**
 <br>
-<p>There is short period of (+/-)10 minute at approximately 00:00 while the JSON data on the Weather Underground website changes over from one day into the next where the data is unavailable. </p>
-<p>I discovered this by accident while working on the project let one night.</p>
+<p>Late in the development while testing the site one evening there was one instance of a short period of (+/-)10 minutes at approximately 00:00 where the JSON data relating to the history.html and chart.html did not display. When it originally happened I thought it was something to do with the changing of the day at 00:00, temporarily leaving the last array empty while updating the data on the Weather Underground website. 
+I checked issue to the console log but in the short period of time when the instance occurred I was not able to diagnose the issue.</p>
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li> At 30-Jan-22, I will have to test the site at 00:00 and identify the relevant error message via console log and code of form an IF/ELSE statement to test that JSON data is available.</li>
+<li> I have observed the site on multiple consecutive nights between 23:00 and 00:30 and have had no recurrence of this issue. The Weather Underground API documentation makes no mention of this issue so I will continue to monitor this to see if the issue occurs, what exactly is happening and if I need to take action. The data from WeatherGround has always been availiable in the console log when I have tested it and no fault has been displayed.</li>
+<li> As a potential update I may look to bring the API data into LocalStorage and use this as a buffer for any unavailability of the 'live' API data. In the long run this would be a better option.</li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
-<p>Unresolved.</p>
+<p>Unresolved, issue has not happened since.</p>
 <br>
 
 **Clearing The Canvas:**

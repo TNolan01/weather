@@ -5,11 +5,7 @@ async function solarChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
     console.log(data);    
-    /* code to check if the API is online */
-    if (data.summaries[6].obsTimeLocal === undefined) {
-        alert("Weather data is currently unavailable, updates occour between 00:00 to 00:15 approximately. Please check back in 15 miuntes.")
-    } else { 
-        
+           
     let dayName=[]; 
 
     /* convert date and time into a day reference for chart label */
@@ -101,9 +97,8 @@ async function solarChart() {
                 a.click();
             } 
             
-     } };
+        };
 
-    function newFunction() {
-        return import('./dayConvert');
-    }
 }
+       
+
