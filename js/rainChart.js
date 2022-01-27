@@ -5,7 +5,7 @@ async function rainChart() {
     const data = await response.json();
     let dayName=[]; /* new array to hold day name for chart */
 
-    /* convert date and time into a day referecnce for chart label */
+    /* convert date and time into a day reference for chart label */
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (let i=0; i<7; i++) {
         let date = data.summaries[i].obsTimeLocal;  

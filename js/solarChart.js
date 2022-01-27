@@ -1,5 +1,6 @@
 
-/*jshint esversion: 9 */ 
+/*jshint esversion: 9 */
+
 async function solarChart() {
     const response = await fetch('https://api.weather.com/v2/pws/dailysummary/7day?stationId=IENNIS18&format=json&units=m&apiKey=d26d907038e74f7fad907038e7ef7f0e');
     const data = await response.json();
@@ -8,17 +9,17 @@ async function solarChart() {
     if (data.summaries[6].obsTimeLocal === undefined) {
         alert("Weather data is currently unavailable, updates occour between 00:00 to 00:15 approximately. Please check back in 15 miuntes.")
     } else { 
-  
+        
+    let dayName=[]; 
 
-    let dayName=[]; /* new array to hold day name for chart */
-
-    /* convert date and time into a day referencce for chart label */
+    /* convert date and time into a day reference for chart label */
+    
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       for (let i=0; i<7; i++) {
         let date = data.summaries[i].obsTimeLocal;  
         let today= days[new Date(date).getDay()];
         dayName.push(today); 
-      }   
+      }    
     
     /* code to destory canvas to allow new chart be displayed */
     document.querySelector("#chart_container").innerHTML = '<canvas id="myChart"></canvas>';  
@@ -101,4 +102,8 @@ async function solarChart() {
             } 
             
      } };
+
+    function newFunction() {
+        return import('./dayConvert');
+    }
 }
