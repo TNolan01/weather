@@ -336,16 +336,18 @@ The charts did not display on an Apple iPhone 5s. The rest of the site and relat
 
 **JSON Data Availability ?:**
 <br>
-<p>Late in the development while testing the site one evening there was one instance of a short period of (+/-)10 minutes at approximately 00:00 where the JSON data relating to the history.html and chart.html did not display. When it originally happened I thought it was something to do with the changing of the day at 00:00, temporarily leaving the last array empty while updating the data on the Weather Underground website. 
+<p>Late in the development while testing the site one evening there was one instance of a short period of 10 minutes at approximately 00:00 where the JSON data relating to the history.html and chart.html did not display. When it originally happened I thought it was something to do with the changing of the day at 00:00, temporarily leaving the last array empty while updating the data on the Weather Underground website. 
 I checked issue to the console log but in the short period of time when the instance occurred I was not able to diagnose the issue.</p>
+<p>Further observation over the course of the following days between 23:00 and 00:30 revealed one further recurrence of this issue.The Weather Underground API documentation makes no mention of this issue but on some occasions, not evey day, at 00:00 approximately as the date changes the size of the associated JSON array changes. </p>
+<p>There should be 7 elements in the array, [0] to [6]. A console log of the data showed that on the night where I the two pages were unable to display data element [6] was missing, leaving the relevant array running from [0] to [5] and stopping the associated JavaScript from functioning.</p>
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li> I have observed the site on multiple consecutive nights between 23:00 and 00:30 and have had no recurrence of this issue. The Weather Underground API documentation makes no mention of this issue so I will continue to monitor this to see if the issue occurs, what exactly is happening and if I need to take action. The data from WeatherGround has always been availiable in the console log when I have tested it and no fault has been displayed.</li>
+<li> Once I had established what was happening I created an IF/ELSE conditional statement. I first test the recieved data to see if all 7 elements were present. If there are less than 7 elements then an alert box will tell the user to re-check in 15 minutes and alert the user to the fact there maybe a 00:00 update and the rest of the relevant JS file does not run.</li>
 <li> As a potential update I may look to bring the API data into LocalStorage and use this as a buffer for any unavailability of the 'live' API data. In the long run this would be a better option.</li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
-<p>Unresolved, issue has not happened since.</p>
+<p>This issue was resolved.</p>
 <br>
 
 **Clearing The Canvas:**

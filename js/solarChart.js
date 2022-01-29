@@ -7,7 +7,7 @@ async function solarChart() {
     /* Test to see if data is available from weather underground by checking there is 7 arrays */
     let length = data.summaries.length;
     if (length < 7) {
-        alert("Weather data currently unavailible, please try again in 15 minutes. Weather can be unavailible between 00:00 and 00:15 due to update.");
+        alert("Weather data is currently unavailable, please try again in 15 minutes. Weather can be unavailible between 00:00 and 00:15 approximately due to update.");
     } else {
 
         let dayName = [];
