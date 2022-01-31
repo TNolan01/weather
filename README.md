@@ -35,8 +35,8 @@
 
 ### User Stories:
 
-<p>Farmer Browne has just purchased a new farm, a 250-hectare block of land in the 'Sunny' Southeast corner of Ireland, Co. Wexford. This parcel of ground is approximately 40 kilometers from Farmer Brownes main center of operations, but the quality of the land makes it excellent for food production.
-Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage in rotation with Barley. Key factors for Farmer Browne to consider from the sowing to harvesting cycles of these crops would be as follows:</p>
+<p>Farmer Browne has just purchased a new farm, a 250-hectare block of land in the 'Sunny' Southeast corner of Ireland, county Wexford. This parcel of ground is approximately 40 kilometers from Farmer Brownes main center of operations, but the quality of the land makes it excellent for food production.
+Farmer Browne is a tillage farmer and his main crops are Potatoes and Cabbage in rotation with Barley. Key factors for Farmer Browne to consider from the sowing to harvesting cycles of these crops would be as follows:</p>
 <ul>
 <li> Recent precipitation totals.</li>
 <li> Recent temperature range. </li>
@@ -60,7 +60,7 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 <p> Luckily for Farmer Browne a property adjoining his new land has a PWS which is active and uploading weather data to the Weather Underground website.</p>
 
 ### Scope:
-*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80-kilometer round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys has staff and where and when he sends his machinery, equipment which is slow and expensive and would consume a lot of diesel on the 80-kilometer trip.*
+*Design a website to allow Farmer Browne simple and up to date access to weather conditions on this new remote site without the need to drive the 80-kilometer round trip from his yard. Provide Farmer Browne with the information to make better decisions about how he deploys his staff and where and when he sends his machinery, equipment which is slow and expensive and would consume a lot of diesel on the 80-kilometer trip.*
 
 <ol>
 <li> Ascertain the information the end user, Farmer Browne, requires. </li>
@@ -70,7 +70,7 @@ Farmer Brownes is a tillage farmer and his main crops are Potatoes and Cabbage i
 
 The site must be...
 <ol>
-<li> Simply to use with a clear uncluttered display which is easy to read. </li>
+<li> Simple to use with a clear uncluttered display which is easy to read. </li>
 <li> Responsive to use on smaller screens. </li>
 <li> Have a forecast / weather projection function. </li>
 </ol>
@@ -84,11 +84,11 @@ The site must be...
 #### Primary Coloring:
 <br>
 <ul>
-<li> The primary back-ground color is white to enhance brightest when used on small screen and/or outdoors and in dark conditions.</li>
-<li> Grey header and footer white text in white for clarity and contrast and frame the begining and end of the data section.  </li>
+<li> The primary back-ground color is white to enhance brightness when used on small screen and/or outdoors and in dark conditions.</li>
+<li> Grey header and footer with text in white for clarity and contrast. Grey color acting as a frame for the begining and end of the data section.  </li>
 <li> Use of orange as high-light color. Orange is used to distinguish sections and values. I also used the orange color with the 'hover' property to show when the user is over a selectable option on the header and footer sections.
 <li> I used blue with the 'hover' property on the buttons on the Charts page to help distinguish which button the user is hovering over. </li>
-<li> The site has simple weather-related logo in the top left-hand corner of the screen.</li>
+<li> The site has a simple weather-related logo in the top left-hand corner of the screen.</li>
 </ul> 
 
 <img title="header" alt="image of web page header" src="readme/color_scheme.png">
@@ -131,8 +131,8 @@ The site must be...
 
 ``` <meta http-equiv="refresh" content="240"> ```
 
-The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
-<p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance. There is code make sure this message is only displayed the first time the user visits the site via localstorage.</p>
+The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the page loads. 
+<p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance. There is code to make sure this message is only displayed the first time the user visits the site via localstorage.</p>
 
 <img title="header" alt="image of web page header" src="readme/current.png">
 <br>
@@ -141,7 +141,7 @@ The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) Ja
 <img title="header" alt="image of web page header" src="readme/intro_box.png">
 <br>
 
-The index.html pages also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time are retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
+The index.html page also contains a span element below the page logo, this displays the date and time for which the data displayed was last updated. This date and time are retrieved along with the weather data via the [getWeather.js](#getWeather) JavaScript.
 
 <img title="header" alt="image of web page header" src="readme/time_date.png">
 <br>
@@ -158,7 +158,7 @@ The index.html pages also contains a span element below the page logo, this disp
 
 <h4 style="color: orange; font-weight: bold">forecast.html</h4>
 
-<p> The forecast.html shows a projected 48hour forecast. The page is identified on the header. as <span style="font-weight: bolder;">'Outlook'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'fcbox'</span>. Each box again represents as a tile and contains a projected forecast for the local area. There are 4no. tiles each with the forecast of 12 hours.</p>
+<p> The forecast.html shows a projected 48hour forecast. The page is identified on the header as <span style="font-weight: bolder;">'Outlook'</span>. The page is constructed of box div's located inside a container. The container has a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'fcbox'</span>. Each box again represents as a tile and contains a projected forecast for the local area. There are 4no. tiles each with the forecast of 12 hours.</p>
 
 <img title="header" alt="image of web page header" src="readme/outlook.png">
 <br>
@@ -252,21 +252,21 @@ With this script I am fetching JSON data relating to current weather conditions.
 
 <h4 id="getHistory" style="color: orange; font-weight: bold">getHistory.js</h4>
 <p>This script fetchs the JSON data arrays for each of the proceeding 7 days. I am picking certain data points and passing them in the html. I have three variables created for some simple calculations to display 7 days averages for humidity, temperature and precipitation.</p>
-<p>I have added a Split and Trim alteration to time part of the data as supplied from the JSON array and just show the date only, this displays is far clearer and cleaner.</p>
+<p>I have added a Split and Trim alteration to the time part of the data as supplied from the JSON array and just show the date only, this displays is far clearer and cleaner.</p>
 
 <h4 id="getForecast" style="color: orange; font-weight: bold">forecast.js</h4>
-<p>The forecasting script simply fetchs JSON data via an API which accesses JSON data from the wunderground.com forecasting model. The data is broken into array items marked as *daypart*. I am using four of these to give a 48 hour projected forecast.</p> 
+<p>The forecasting script simply fetchs JSON data via an API which accesses the data from the wunderground.com forecasting model. The data is broken into array items marked as *daypart*. I am using four of these to give a 48 hour projected forecast.</p> 
 
 <h4 id="rainChart" style="color: orange; font-weight: bold">rainChart.js</h4>
 <h4 id="tempChart" style="color: orange; font-weight: bold">tempChart.js</h4>
 <h4 id="solarChart" style="color: orange; font-weight: bold">solarChart.js</h4>
 <h4 id="windChart" style="color: orange; font-weight: bold">windChart.js</h4>
-<p> These four scripts for the basis of rain_chart.html. All are similar in structure. Fetching the required data and then rendering into a line graph with Chart.js.</p>
+<p> These four scripts form the basis of rain_chart.html. All are similar in structure. Fetching the required data and then rendering into a line graph with Chart.js.</p>
 <p> Other elements which form part of the functions that make up these scripts are as follows.</p>
 <ul>
 <li>Code to convert the date from the JSON format YYYY-MM-DD 00:00:00 to the relvant day name, ie. Monday, Tuesday etc. This is for the reason of clarity as the JSON date format would be to cluttered and unclear when shown on the graph.</li>
-<li>I have also included code to destroy the 'canvas' prior to creating the new graph. With this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
-<li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts asks the user to confirm or cancel the download, if they have clicked the download button.</li> 
+<li>I have also included code to destroy the 'canvas' prior to creating the new graph. Without this the you could not use the same canvas repeatedly to create the different graphs relating to the option selected. </li>
+<li>I have created the variable to convert the newly create chart to a PNG image, the user has the option to download the currently displayed chart. A pop up prompts the user to confirm or cancel the download, if they have clicked the download button the png file is downloaded.</li> 
 </ul>
 <br>
 
@@ -314,37 +314,38 @@ The site was tested through the web.dev site.
 <li> Apple iPhone 12 </li>
 <li> Samsung Tab A 10.1" Tablet </li>
 <li> Amazon Fire 10" HD Tablet </li>
+<li> Tested through Google Chrome developer tools across multiple screen sizes and emulations.</li>
 </ul>
 <br>
 
 ### Identified Issues & Bugs:
-I now list some of the bugs and issues I have encounter and their current status.
+I now list some of the bugs and issues I have encountered and their current status.
 <br>
 <br>
 **iPhone 5 Issue:**
 <br>
-The charts did not display on an Apple iPhone 5s. The rest of the site and related JSON data worked and displayed but the charts were not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. The Safaris browser is also out of date.
+The charts did not display on an Apple iPhone 5s. The rest of the site and related JSON data worked and displayed but the charts were not rendered regardless of the chart option selected. The Apple IOS on this phone is version 12.4 which was released in July 2019. There have been 15 updates to the OS since Version 12.4 was released. The Safari browser is also out of date and registers a warning upon opening that it requires an update.
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li>I tried to write a media query to directly target the Iphone 5 screen on min and max width, this was unsucessful.</li>
-<li>I experimented with a simpler chart and HTML but this did not render on the IPhone 5s  </li>
+<li>I tried to write a media query to directly target the Iphone 5 screen on min and max width, this was did not resolve the issue.</li>
+<li>I experimented with a simpler chart and HTML but this did not render on this IPhone 5s either. </li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
-<p> This issue is unresolved. It is more than likely an issue with a combination of this particular phone and the out-of-date OS and Brower software. The software on this device has not updated for 24 months approximately. As the website is functional on the more recent and current of Apple IOS driven devices, I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
+<p> This issue is unresolved. It is more than likely an issue with a combination of this particular phone and the out-of-date OS and browser software. The software on this device has not updated for 24 months approximately. As the website is functional on the more up to date and current Apple IOS driven devices, I do not think it is feasible to pursue further changes and updates to solve an issue which appears applicable to this device only.</p> 
 <br>
 
-**JSON Data Availability ?:**
+**JSON Data Availability :**
 <br>
 <p>Late in the development while testing the site one evening there was one instance of a short period of 10 minutes at approximately 00:00 where the JSON data relating to the history.html and chart.html did not display. When it originally happened I thought it was something to do with the changing of the day at 00:00, temporarily leaving the last array empty while updating the data on the Weather Underground website. 
-I checked issue to the console log but in the short period of time when the instance occurred I was not able to diagnose the issue.</p>
-<p>Further observation over the course of the following days between 23:00 and 00:30 revealed one further recurrence of this issue.The Weather Underground API documentation makes no mention of this issue but on some occasions, not evey day, at 00:00 approximately as the date changes the size of the associated JSON array changes. </p>
-<p>There should be 7 elements in the array, [0] to [6]. A console log of the data showed that on the night where I the two pages were unable to display data element [6] was missing, leaving the relevant array running from [0] to [5] and stopping the associated JavaScript from functioning.</p>
+I tried to log the data to the console log but in the short period of time when the instance occurred I was not able to diagnose the issue.</p>
+<p>Further observation over the course of the following days between 23:00 and 00:30 revealed one further recurrence of this issue.The Weather Underground API documentation makes no mention of this issue but on some occasions, not every day, at 00:00 approximately as the date changes the size of the associated JSON array changes. </p>
+<p>There should be 7 elements in the array, [0] to [6]. A console log of the data showed that on the night where the two pages were unable to display the data element [6] was missing, leaving the relevant array running from [0] to [5] and stopping the associated JavaScript from functioning.</p>
 
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
 <li> Once I had established what was happening I created an IF/ELSE conditional statement. I first test the recieved data to see if all 7 elements were present. If there are less than 7 elements then an alert box will tell the user to re-check in 15 minutes and alert the user to the fact there maybe a 00:00 update and the rest of the relevant JS file does not run.</li>
-<li> As a potential update I may look to bring the API data into LocalStorage and use this as a buffer for any unavailability of the 'live' API data. In the long run this would be a better option.</li>
+<li> As a potential update I would look to bring the API data into LocalStorage and use this as a buffer for any unavailability of the 'live' API data. In the long run this would be a better option as there would be less 'live' requests to the wunderground data.</li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
 <p>This issue was resolved.</p>
@@ -355,7 +356,7 @@ I checked issue to the console log but in the short period of time when the inst
 <p>I wanted to have the charts all render on the same canvas on the rain_chart.html. To do this, it is necessary to 'destroy' the canvas and its present chart prior to creating the new chart.<p>
 <span style="color: blue; font-weight: bold;">Steps taken to resolve this issue:</span>
 <ol>
-<li> After checking the Chart.JS documentation and trying code fixes in the JavaScript and researching the function I found a simple fix for this with single line of code from Stack Overflow.</li>
+<li> After checking the Chart.JS documentation and trying code fixes in the JavaScript and researching the function I found a simple fix for this with a single line of code from Stack Overflow.</li>
 </ol>
 <span style="color: blue; font-weight: bold;">Current Status:</span>
 <p>This issue was resolved.</p>
