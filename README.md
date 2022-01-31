@@ -127,9 +127,9 @@ The site must be...
 <h4 style="color: orange; font-weight: bold">index.html</h4>
 
 <p>The index.html shows the current weather. The page is identified on the header as <span style="font-weight: bolder;">'Current'</span>. The page is constructed of box div's located inside a container, with a class of <span style="color: orange;">'container'</span>. Each box has a class of <span style="color: orange;">'box'</span> and contains a single weather-related value based on the most current data. I am using a grid structure to make these div's responsive. The box div's present as separate tiles. </p>
-<p>The index.html is set to auto refresh every 120 seconds.</p> 
+<p>The index.html is set to auto refresh every 240 seconds.</p> 
 
-``` <meta http-equiv="refresh" content="120"> ```
+``` <meta http-equiv="refresh" content="240"> ```
 
 The data displayed on tiles is retrieved via the [getWeather.js](#getWeather) JavaScript which is called when the pages loads. 
 <p>On load this page displays a pop up box to identify the position of the weather station and geographic area for which the data has relevance. There is code make sure this message is only displayed the first time the user visits the site via localstorage.</p>
